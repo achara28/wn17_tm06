@@ -1,0 +1,31 @@
+<ion-view title="Answer Questions" id="page2" hide-back-button="true">
+  <ion-content cache-view="false" padding="true" class="has-header" hideBackButton="true">
+    <div id="answerQuestions-markdown4" class="show-list-numbers-and-dots">
+      <p style="color:#000000; font-size:150%" ng-model="data.Question">{{data.Question}}</p>
+      <br />
+      <p style="color:#000000; font-size:120%" ng-model="data.answer1">{{!data.answer1?'':'a) '+data.answer1 }}</p>
+      <p style="color:#000000; font-size:120%" ng-model="data.answer2">{{!data.answer2?'':'b) '+data.answer2 }}</p>
+      <p style="color:#000000; font-size:120%" ng-model="data.answer3">{{!data.answer3?'':'c) '+data.answer3 }}</p>
+      <p style="color:#000000; font-size:120%" ng-model="data.answer4">{{!data.answer4?'':'d) '+data.answer4 }}</p>
+      
+      
+      
+      
+    </div>
+    <form id="answerQuestions-form8" class="list">
+     
+      <label class="item item-select" id="answerQuestions-select3">
+        <span class="input-label">Select</span>
+        <select ng-model="data.mySelect">
+          <option ng-repeat="item in answers" value="{{item.answer}}">{{item.answer}}</option>
+        </select>
+        
+
+      </label>            
+
+
+    </form>
+    <button id="answerQuestions-button1" class="button button-positive button-block" ng-disabled="submitted" ng-click="submit()">Submit</button>
+    <p style="font-size:130%;">{{counter}}</p>
+  </ion-content>
+</ion-view>

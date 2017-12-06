@@ -1,0 +1,20 @@
+<ion-view title="Question" id="page4">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="question-list3">
+      
+      <div id="Question-markdown1" class="show-list-numbers-and-dots">
+        
+        <p style="color:#000000; font-size:150%" ng-model="data.Question">{{data.Question}}</p>
+        <br />
+        <p style="color:#000000; font-size:120%" ng-model="data.answer1">{{!data.answer1?'':'a) '+data.answer1 }}</p>
+        <p style="color:#000000; font-size:120%" ng-model="data.answer2">{{!data.answer2?'':'b) '+data.answer2 }}</p>
+        <p style="color:#000000; font-size:120%" ng-model="data.answer3">{{!data.answer3?'':'c) '+data.answer3 }}</p>
+        <p style="color:#000000; font-size:120%" ng-model="data.answer4">{{!data.answer4?'':'d) '+data.answer4 }}</p>
+        <br />
+        <p style="color:#000000; font-size:120%" ng-model="data.correct">Correct answer: {{data.correct}}</p>
+        
+      </div>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

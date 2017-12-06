@@ -1,0 +1,13 @@
+<ion-view title="Questions" id="page3">
+  <ion-content padding="true" class="has-header">
+    <ion-refresher on-refresh="doRefresh()">
+      
+    </ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="item in data" ng-click="displayQuestion(item.id)">
+        {{item.name}}
+      </ion-item>
+    </ion-list> 
+
+  </ion-content>
+</ion-view>
