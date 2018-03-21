@@ -1,0 +1,243 @@
+﻿html, body, .container {
+    width: 100%;
+    height: 100%;
+    /*background-color: #2F4F4F;*/
+}
+
+.container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main-90 {
+    height: 85%;
+}
+
+.main {
+    height: 100%;
+}
+
+.map {
+    overflow: hidden;
+    height: 100%;
+}
+
+.map .awesome {
+    font-size: 85%;
+}
+
+.leaflet-touch .leaflet-control-layers-toggle {
+    width: 30px;
+    height: 30px;
+}
+
+.daterange {
+    position: absolute;
+}
+
+.daterange i {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    top: auto;
+    cursor: pointer;
+}
+
+.leaflet-popup-content {
+    width: auto !important;
+}
+
+/*********************
+*   2.  Navbar
+**********************/
+.navbar {
+    margin-bottom: 0px;
+    border: 0px;
+}
+
+.navbar-custom {
+    background-color: #2F4F4F
+}
+
+.navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    background-color: #FFFFFF
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a:hover, .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a:hover, .navbar-custom .navbar-nav > .open > a:focus {
+    background-color: #334E85
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #FFFFFF
+}
+
+.navbar-custom {
+    background-image: none;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-image: none;
+}
+
+.navbar-custom {
+    border-color: #2F4F4F
+}
+
+.navbar-custom .navbar-brand {
+    color: #F7F7F7
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #8B9DC3
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #F7F7F7
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    color: #8B9DC3
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .open > a, .navbar-custom .navbar-nav > .open > a:hover, .navbar-custom .navbar-nav > .open > a:focus {
+    color: #FFFFFF
+}
+
+.navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus {
+    color: #8B9DC3
+}
+
+.dropdown-menu > li > a {
+    color: #F7F7F7
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #8B9DC3
+}
+
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+    border-top-color: #F7F7F7
+}
+
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret {
+    border-top-color: #FFFFFF
+}
+
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+    border-bottom-color: #F7F7F7
+}
+
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret {
+    border-bottom-color: #FFFFFF
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/*********************
+*   3.  iframe
+**********************/
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.iframe {
+    height: 100%;
+    width: 100vw;
+}
+
+#iframe {
+    border: none;
+    display: block;
+    height: 90%;
+    width: 100%;
+}
+
+/***********************
+* Login
+***********************/
+.login-ex {
+    background-color: white;
+    padding: 50px;
+    height: 100%;
+}
+
+.login-in {
+    margin: 50px;
+
+}
+
+/********************
+* Dialog
+*********************/
+
+.dialog-title {
+    background-color: #2F4F4F;
+    color: white;
+}
+
+/*******************
+* Footer
+*******************/
+
+.footer-img {
+    /*height: 70px;*/
+    padding: 10px 10px;
+}
+
+.pythia-alert {
+    position: absolute;
+    z-index: 1;
+    margin: 0 50px;
+}
+
+/*******************
+*
+********************/
+
+/*.more:before {*/
+/*font-family: 'Glyphicons Halflings';*/
+/*content: "\e114";*/
+/*}*/
+
+/*.more.collapsed:before {*/
+/*content: "\e080";*/
+
+/*}*/
+
+.rightb {
+    float: right;
+    margin: 5px;
+}
+
+/*
+* Slider Selection
+*/
+
+.slider.slider-horizontal .slider-selection {
+    background: #2F4F4F;
+}
+
+.query-panel {
+    padding-left: 10px;
+    min-width: 270px;
+}
+
+.leaflet-retina .leaflet-control-layers-toggle{
+    opacity: .75;
+    background-image: url(/assets/stylesheets/images/icons-000000@2x.png);
+background-repeat: no-repeat;
+background-size: 26px 260px;
+}
+
+
+.pac-container {
+    z-index: 9999;
+}

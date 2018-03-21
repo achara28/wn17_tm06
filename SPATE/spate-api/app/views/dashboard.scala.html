@@ -1,0 +1,183 @@
+@(masterState: pythia.deploy.messages.ActorMessages.MasterStateResponse,
+        runningJobs: Seq[controllers.JobsController.JobMeta],
+        finishedJobs: Seq[controllers.JobsController.JobMeta],
+        generatorInfo: pythia.models.generator.GeneratorInfo,
+        recorderInfo: pythia.models.recorder.RecorderInfo)
+
+@import util.UIUtils
+
+@main("Dashboard") {
+  <div class="row">
+      <!-- Generator -->
+    <div class="col-lg-4 col-md-6">
+      <div class="panel panel-yellow">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-gears fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge">
+                @{
+                  if(generatorInfo.state != "Started")
+                    generatorInfo.state
+                  else
+                    generatorInfo.performance
+                }
+              </div>
+              <div>Generator</div>
+            </div>
+          </div>
+        </div>
+        <a href="@routes.Application.generator()">
+          <div class="panel-footer">
+            <span class="pull-left">View Details</span>
+            <span class="pull-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            <div class="clearfix"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+      <!-- /Generator -->
+      <!-- Recorder -->
+    <div class="col-lg-4 col-md-6">
+      <div class="panel panel-red">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-hdd-o fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge">@recorderInfo.state</div>
+              <div>Recorder</div>
+            </div>
+          </div>
+        </div>
+        <a href="@routes.Application.recorder()">
+          <div class="panel-footer">
+            <span class="pull-left">View Details</span>
+            <span class="pull-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            <div class="clearfix"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+      <!-- /Recorder -->
+      <!-- Jobs (Stats) -->
+    <div class="col-lg-4 col-md-6">
+      <div class="panel panel-green">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-tasks fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge">
+                @runningJobs.size
+              </div>
+              <div>Jobs Running</div>
+            </div>
+          </div>
+        </div>
+        <a href="@routes.Application.jobs()">
+          <div class="panel-footer">
+            <span class="pull-left">View Details</span>
+            <span class="pull-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </span>
+            <div class="clearfix"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+      <!-- /Jobs (Stats) -->
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+        <!-- Server status -->
+      <div class="panel panel-default panel-primary">
+        <div class="panel-heading">
+          <i class="fa fa-bullhorn fa-fw"></i>
+          Master Status
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu slidedown">
+              <li>
+                <a href="#">
+                  <i class="fa fa-refresh fa-fw"></i>
+                  Refresh
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <!-- /.panel-heading -->
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="#" class="list-group-item">
+              <i class="fa fa-upload fa-fw"></i>
+              Server State
+              <span class="pull-right text-muted small">
+                <em>
+                  @masterState.state
+                </em>
+              </span>
+            </a>
+            <a href="#" class="list-group-item">
+              <i class="fa fa-clock-o fa-fw"></i>
+              Uptime
+              <span class="pull-right text-muted small">
+                <em>
+                  @UIUtils.formatDuration(masterState.uptime)
+                </em>
+              </span>
+            </a>
+            <a href="#" class="list-group-item">
+              <i class="fa fa-tasks fa-fw"></i>
+              Running jobs
+              <span class="pull-right text-muted small">
+                <em>
+                  @masterState.activeJobsCount
+                </em>
+              </span>
+            </a>
+            <a href="#" class="list-group-item">
+              <i class="fa fa-tasks fa-fw"></i>
+              Finished jobs
+              <span class="pull-right text-muted small">
+                <em>
+                  @masterState.completedJobsCount
+                </em>
+              </span>
+            </a>
+            <a href="#" class="list-group-item">
+              <i class="fa fa-globe fa-fw"></i>
+              Master URL
+              <span class="pull-right text-muted small">
+                <em>pythia://
+                  @masterState.host
+                  :
+                  @masterState.port
+                </em>
+              </span>
+            </a>
+          </div>
+            <!-- /.list-group -->
+        </div>
+          <!-- /.panel-body -->
+      </div>
+        <!-- /.panel -->
+    </div>
+      <!-- /.col-lg-8 -->
+    <div class="col-lg-4">
+
+    </div>
+      <!-- /.col-lg-4 -->
+  </div>
+}

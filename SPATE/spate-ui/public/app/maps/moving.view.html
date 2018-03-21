@@ -1,0 +1,126 @@
+﻿<div  ng-controller="AnalyticsController as analytics"  class="main">
+<div id="my-alert" class="alert alert-info fade in pythia-alert">
+
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+    <a class="btn btn-primary export rightb" href="javascript:void(0);"><span class="glyphicon glyphicon-download-alt"/></a>
+    <a class="btn btn-primary rightb"  data-toggle="collapse" data-target="#collapseExample"><span class="glyphicon glyphicon-filter"/></a>
+    <a class="btn btn-primary rightb"  data-toggle="collapse" data-target="#collapseExample"><span class="glyphicon glyphicon-chevron-down"/></a>
+    <a class="collapsed" data-toggle="collapse" data-target="#collapseExample"   tdata-toggle="tooltip" data-placement="left" title="Explore Download/Upload speeds of IMSI products from CDR data." aria-expanded="false" aria-controls="collapseExample">
+
+
+        <b>This query shows the IMSI products that have moved location based on CDR data</b>
+    </a>
+
+    <div class="collapse" id="collapseExample">
+            <div>
+
+                <p>Filters: The below filters allow you to present on the map selected subsets
+                    according to IMSI numbers (e.g., 35799439212) or MTN Cyprus ProductIDs.
+                    Select "All" to present</p>
+
+                <div>
+                    <div>Find a subscriber:</div>
+                    <autocomplete attr-placeholder="e.g. CallingPartyIMSI" click-activation="true"
+                                  data="callingPartyIMSIs" id="imsi"
+                                  on-select="subscriberDetails"></autocomplete>
+
+                </div>
+
+                <div>
+                    <div>Find a product:</div>
+                    <autocomplete attr-placeholder="e.g. ProductID" click-activation="true" data="productIDs"
+                                  id="products" on-select="productDetails"></autocomplete>
+                </div>
+                <div>
+                    <div>Download Speed (KB)</div>
+                    <b>0 KB</b> <input id="download" style=" width: 210px;" value="" data-slider-min="0" data-slider-max="10240" data-slider-step="5" data-slider-value="[0,3072]"/> <b>10 MB</b>
+
+                    <div>Upload Speed (KB)</div>
+                    <b>0 KB</b> <input id="upload" style=" width: 210px;" value="" data-slider-min="0" data-slider-max="10240" data-slider-step="5" data-slider-value="[0,3072]"/> <b>10 MB</b>
+
+                </div>
+                <p>* Export: This will return results based on the filter
+                    predicates and allow the user to see the endpoint a new window
+                    <a class="export" href="javascript:void(0);">Export</a></p>
+
+                <!--<pythia-map-options id="pythia_map_options"></pythia-map-options>-->
+
+            </div>
+
+    </div>
+
+
+</div>
+
+<div class="main">
+
+
+    <!-- Modal -->
+    <div id="settings" class="modal fade" tabindex='-1' role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Settings</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div>
+                        <p>The settings will applied on all tabs/views of the system.</p>
+                    </div>
+                    <div>
+                        Show Cell Tower Location:
+                        <input type="checkbox" name="show-cells">
+                    </div>
+                    <div>
+                        Show Cell Tower Location Count:
+                        <input type="checkbox" name="show-cells-count">
+                    </div>
+                    <div>
+                        Show Predicted Coverage Map (2G):
+                        <input type="checkbox" name="show-heatmap2g">
+                    </div>
+                    <div>
+                        Show Predicted Coverage Map (3G):
+                        <input type="checkbox" name="show-heatmap3g">
+                    </div>
+                    <div>
+                        Show Predicted Coverage Map (4G):
+                        <input type="checkbox" name="show-heatmap4g">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="export" class="modal fade" tabindex='-1' >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Exported Data</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="map" class="map">
+    </div>
+
+
+</div>
+</div>

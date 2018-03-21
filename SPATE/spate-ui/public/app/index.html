@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <title>MTN application</title>
+    <link rel="stylesheet" href="../stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../stylesheets/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="../stylesheets/MarkerCluster.css">
+    <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="../stylesheets/metricsgraphics.css">
+    <link rel="stylesheet" href="../stylesheets/leaflet.css">
+    <link rel="stylesheet" href="../stylesheets/mapbox.css">
+    <link href="app-content/app.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div class="container">
+        <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+             ng-if="flash" ng-bind="flash.message"></div>
+        <div ng-view class="main-90 " ></div>
+</div>
+
+<script src="../javascripts/jquery-2.0.3.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="../javascripts/bootstrap.min.js"></script>
+<script src="../javascripts/angular.min.js"></script>
+<script src="../javascripts/angular-route.min.js"></script>
+<script src="../javascripts/angular-cookies.min.js"></script>
+<script src="../javascripts/sha1.js"></script>
+<script src="../javascripts/leaflet.js"></script>
+<script src="../javascripts/leaflet.markercluster.js"></script>
+<script src="../javascripts/plugins/leaflet.awesome-markers.js"></script>
+<script src="../javascripts/plugins/L.Control.Locate.js"></script>
+<script type="text/javascript" src="../javascripts/heatmap.min.js" ></script>
+<script type="text/javascript" src="../javascripts/leaflet-heatmap.js"></script>
+
+<script src="app.js"></script>
+<script src="app-services/authentication.service.js"></script>
+<script src="app-services/flash.service.js"></script>
+
+<!-- Real user service that uses an api -->
+<script src="app-services/user.service.js"></script>
+
+<script src="maps/moving.controller.js"></script>
+<script src="maps/manage.controller.js"></script>
+<script src="home/home.controller.js"></script>
+<script src="login/login.controller.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="../stylesheets/daterangepicker.css" />
+<script type="text/javascript" src="../javascripts/moment.js"></script>
+<script type="text/javascript" src="../javascripts/moment-timezone-with-data.js"></script>
+<script type="text/javascript" src="../javascripts/daterangepicker.js"></script>
+<script type="text/javascript" src="../javascripts/plugins/d3.min.js" ></script>
+<script type="text/javascript" src="../javascripts/metricsgraphics.js"></script>
+
+</body>
+</html>

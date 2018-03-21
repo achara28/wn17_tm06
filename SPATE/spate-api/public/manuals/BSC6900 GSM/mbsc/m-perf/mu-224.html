@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="reference" />
+<meta name="DC.Title" content="PPP Link Measurement(PPP)" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mu-224" />
+<meta name="DC.Language" content="en-us" />
+<title>PPP Link Measurement(PPP)</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mu-224.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-224.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-224.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mu-224" id="Mu-224"></a><a name="Mu-224" id="Mu-224"></a>
+<h1 class="topictitle1">PPP Link Measurement(PPP)</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Overview</h4>
+
+<p>The quality of transmission links directly affects the system
+performance. The PPP link measurement helps analyze system
+transmission quality so as to maintain system stability and
+reliability.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 1</b> The four
+layers of the TCP/IP protocol suite</span><br />
+<span><img src="images/protocol_mac.gif" /></span><br />
+</div>
+
+<p>PPP link belongs to the Link layer of the TCP/IP protocol suite,
+as figure 1 shows.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 2</b> Physical
+bearer of the PPP Link</span><br />
+<span><img src="images/ppp.gif" /></span><br />
+</div>
+
+<p>In the configuration structure, PPP links are between physical
+ports and logical applications, as shown in the figure 2.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.1">
+ID</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.2">
+Counter</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.3">
+Description</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.4">
+Original Release</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194417</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4371.html">VS.PPP.TXPACKETS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7345:Number of Frames Transmitted on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194418</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4372.html">VS.PPP.TXBYTES</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7346:Number of Bytes Transmitted on a PPP Link.</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194419</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4371.html">VS.PPP.TXDROPS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7347:Number of Frames Discarded in Transmission on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194420</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4371.html">VS.PPP.RXPACKETS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7348:Number of Frames Successfully Received on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194421</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4372.html">VS.PPP.RXBYTES</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7349:Number of Bytes Received on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194422</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4371.html">VS.PPP.RXDROPS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7350:Number of Frames Discarded in Reception on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194425</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4376.html">VS.PPP.FAULTTIME</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7353:Duration of Faults on a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194426</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.TXMAXSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7356:Maximum Transmit Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194427</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.TXMINSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7357:Minimum Transmit Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194428</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.TXMEANSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7358:Average Transmit Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194429</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.RXMAXSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7361:Maximum Receive Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194430</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.RXMINSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7362:Minimum Receive Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67194431</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27664.html">VS.PPP.RXMEANSPEED</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7363:Average Receive Rate of a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204198</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27670.html">VS.PPP.Alloced.Ave.Fwd</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7365:Mean forward bandwidth assigned to a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204199</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27670.html">VS.PPP.Alloced.Ave.Bwd</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7368:Mean backward Bandwidth Assigned to a PPP Link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193245</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27670.html">VS.PPP.Alloced.Max.Fwd</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7371:Maximum forward bandwidth assigned to a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193246</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27670.html">VS.PPP.Alloced.Max.Bwd</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7372:Maximum backward bandwidth assigned to a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193247</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4388.html">VS.PPP.Fwd.Cong</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7373:Number of forward congestions on a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193248</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27672.html">VS.PPP.Fwd.Cong.Dur</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7374:Duration of forward congestion on a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193249</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4388.html">VS.PPP.Bwd.Cong</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7375:Number of backward congestions on a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67193250</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27672.html">VS.PPP.Bwd.Cong.Dur</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+T7376:Duration of backward congestion on a PPP link</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Counter Relationship</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

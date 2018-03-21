@@ -1,0 +1,34 @@
+﻿<div ng-controller="AdminController as admin" class="main">
+
+    <div class="main">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav admin navbar-nav">
+                    <li class="active"><a href="javascript:admin();">Admin</a></li>
+                    <li><a href="javascript:spark();">Spark</a></li>
+                    <li><a href="javascript:yarn();">Yarn</a></li>
+                    <li><a href="javascript:hdfs();">HDFS</a></li>
+                    <li><a href="javascript:db();">DB</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+
+
+        <div class="iframe">
+            <iframe id="iframe" name="iframe" scrollbars="no"></iframe>
+        </div>
+    </div>
+</div>

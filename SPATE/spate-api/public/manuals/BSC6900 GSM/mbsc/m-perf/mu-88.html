@@ -1,0 +1,1757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="reference" />
+<meta name="DC.Title" content=
+"Local Switch Measurement per Cell(CALL.LocalSwitch.CELL)" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mu-88" />
+<meta name="DC.Language" content="en-us" />
+<title>Local Switch Measurement per
+Cell(CALL.LocalSwitch.CELL)</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mu-88.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-88.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-88.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mu-88" id="Mu-88"></a><a name="Mu-88" id="Mu-88"></a>
+<h1 class="topictitle1">Local Switch Measurement per
+Cell(CALL.LocalSwitch.CELL)</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Overview</h4>
+
+<p>Local Switch Measurement per Cell provides counters in the local
+switch state. These counters involve the number of call detect
+messages originated during local switching, the number of local
+switching start attempts, the number of local switching handovers,
+the number of successful handover attempts, the local switching
+success rate, the local switching handover success rate.</p>
+
+<p>The BSS local switch consists of BSC local switch and BTS local
+switch. At present, the BSS local switch supports speech services
+instead of data services.</p>
+
+<p>In BSC local switch, the calling and called MSs are served by
+the same BSC. On the Abis interface, the BSC directly routes the
+speech signals to the addressed MS without routing them to the NSS,
+as shown in Figure 1. The BSC local switch aims to save the
+transmission resources on the Ater interface and the DSP resources
+on the DPU when the TCS is remotely located.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 1</b> BSC local
+switch</span><br />
+<span><img src="images/gcell-callbsclocal.gif" /></span><br />
+</div>
+
+<p>The call setup in BSC local switch must meet the general policy
+of BSS local switch, start conditions of BSC local switch, the
+related conditions for selecting speech versions of the calling and
+called MSs. In addition, the calling and called MSs must be served
+by the same BSC.</p>
+
+<p>In BTS local switch, the calling and called MSs are served by
+the same BTS or by the same BTS group. The BTS or BTS group
+processes the Abis speech signals associated with the call and
+transmits the speech signals to the called MS without routing them
+to the BSC or MSC, as shown in Figure 2. Based on the different
+positions of the calling and called MSs, the BTS local switch can
+save the transmission resources on segment B and C or on segments
+A, B, and C. The BTS local switch aims to save the transmission
+resources on the Abis interface and on the Ater interface.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 2</b> BTS local
+switch</span><br />
+<span><img src="images/gcell-callbtslocal.gif" /></span><br />
+</div>
+
+<p>The call setup in BTS local switch must meet the general policy
+of BSS local switch, start conditions of BTS local switch, the
+related conditions for selecting speech versions of the calling and
+called MSs. In addition, the calling and called MSs must be served
+by the same BTS.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.1">
+ID</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.2">
+Counter</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.3">
+Description</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.4">
+Original Release</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089417</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1734.html">CELL.LOCALSWITCH.LOOP.CALL.DETECT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R380:Number of Call Detect Messages Originated during Local
+Switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089418</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1735.html">CELL.LOCALSWITCH.LOOP.START.TRY</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R381:Number of local switching Start Attempts</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089419</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1736.html">CELL.LOCALSWITCH.LOOP.FAIL.NO.LOOP.POLICY</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3820:Number of local switching Start Failures (No local switching
+Policy Available)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089420</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1737.html">CELL.LOCALSWITCH.LOOP.FAIL.SVR.ADJUST.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3821:Number of local switching Start Failures (Speech Version
+Adjustment Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089421</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1738.html">CELL.LOCALSWITCH.LOOP.FAIL.INVALID.STATE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3822:Number of local switching Start Failures (Invalid State)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089422</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1739.html">CELL.LOCALSWITCH.LOOP.FAIL.BTS.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3823:Number of local switching Start Failures (Failures on the BTS
+Side)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089423</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1740.html">CELL.LOCALSWITCH.LOOP.FAIL.APPLY.TRSL.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3824:Number of local switching Start Failure (Terrestrial Resource
+Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089424</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1741.html">CELL.LOCALSWITCH.LOOP.FAIL.EXP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3825:Number of local switching Start Failure (Timer Expired)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089425</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1742.html">CELL.LOCALSWITCH.LOOP.FAIL.BTS.NOT.SUPPORT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3826:Number of local switching Start Failures (Not Support by the
+BTS)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089426</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1743.html">CELL.LOCALSWITCH.LOOP.FAIL.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3827:Number of local switching Start Failures (Other Causes)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089427</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1744.html">CELL.LOCALSWITCH.BTSLOOP.HO.BTS.LOOP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R382a:Number of BTS local switching Failures after the Handover
+during the BTS local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089428</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1745.html">CELL.LOCALSWITCH.BTSLOOP.HO.BSC.LOOP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R382b:Number of BSC local switching Failures after the Handover
+during the BTS local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089429</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1746.html">CELL.LOCALSWITCH.BSCLOOP.HO.BTS.LOOP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R382c:Number of BTS local switching Failures after the Handover
+during the BSC local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089430</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1747.html">CELL.LOCALSWITCH.BSCLOOP.HO.BSC.LOOP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R382d:Number of BSC local switching Failures after the Handover
+during the BSC local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089431</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1748.html">CELL.LOCALSWITCH.BSCLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3830:Number of Successful BSC local switching Attempts</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089432</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1749.html">CELL.LOCALSWITCH.BTSLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3831:Number of Successful BTS local switching Attempts</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089433</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1750.html">CELL.LOCALSWITCH.BTSLOOP.HO.BSCLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3830a:Number of Successful BSC local switching Attempts after the
+Handover during the BTS local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089434</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1751.html">CELL.LOCALSWITCH.BTSLOOP.HO.BTSLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3831a:Number of Successful BTS local switching Attempts after the
+Handover during the BTS local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089435</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1752.html">CELL.LOCALSWITCH.BSCLOOP.HO.BSCLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3830b:Number of Successful BSC local switching Attempts after the
+Handover during the BSC local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089436</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1753.html">CELL.LOCALSWITCH.BSCLOOP.HO.BTSLOOP.SUCCESS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3831b:Number of Successful BTS local switching Attempts after the
+Handover during the BSC local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089437</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26960.html">CELL.LOOP.START.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CR382:Number of Local Swithching Start Failures</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089438</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1754.html">CELL.LOCALSWITCH.RESTORE.TRY.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3840:Number of Attempts to Return to Normal Call from BSC local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089439</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1755.html">CELL.LOCALSWITCH.RESTORE.TRY.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3841:Number of Attempts to Return to Normal Call from BTS local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089440</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1756.html">CELL.LOCALSWITCH.LOOP.RESTORE.APPLY.TRSL.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3850a:Number of Failures to Return to Normal Call from BSC local
+switching (Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089441</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1757.html">CELL.LOCALSWITCH.LOOP.RESTORE.APPLY.TRSL.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3851a:Number of Failures to Return to Normal Call from BTS local
+switching (Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089442</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1758.html">CELL.LOCALSWITCH.LOOP.RESTORE.OTHER.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3850b:Number of Failures to Return to Normal Call from BSC local
+switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089443</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1759.html">CELL.LOCALSWITCH.LOOP.RESTORE.OTHER.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3851b:Number of Failures to Return to Normal Call from BTS local
+switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089444</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26961.html">CELL.BSC.LOOP.RESTORE.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CR3850:Number of Failures to Return to Normal Call from BSC local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089445</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26962.html">CELL.BTS.LOOP.RESTORE.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CR3851:Number of Failures to Return to Normal Call from BTS local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089446</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26963.html">CELL.BSC.LOOP.RESTORE.SUCC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3860:Number of Successful Attempts to Return to Normal Call from
+BSC local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089447</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26964.html">CELL.BTS.LOOP.RESTORE.SUCC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3861:Number of Successful Attempts to Return to Normal Call from
+BTS local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089448</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26965.html">CELL.BSC.LOOP.RESTORE.RATE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+TR3860:BSC local switching to Normal Call Success Rate</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089449</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26966.html">CELL.BTS.LOOP.RESTORE.RATE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+TR3861:BTS local switching to Normal Call Success Rate</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089450</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1760.html">CELL.CALL.DROPS.BSCLOOP.FAIL.APPLY.TRSL.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3720:Call Drops due to BSC local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089451</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1761.html">CELL.CALL.DROPS.BSCLOOP.FAIL.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3721:Call Drops due to BSC local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089452</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1762.html">CELL.CALL.DROPS.BTSLOOP.FAIL.APPLY.TRSL.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3820:Call Drops due to BTS local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089453</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1763.html">CELL.CALL.DROPS.BTSLOOP.FAIL.BTS.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3821:Call Drops due to BTS local switching Start Failure (Failures
+on the BTS Side)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089454</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1764.html">CELL.CALL.DROPS.BTSLOOP.FAIL.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3822:Call Drops due to BTS local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089455</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1765.html">CELL.CALL.DROPS.LOOP.FAIL.EXP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M390:Call Drops due to local switching Start Failure (Timer
+Expired)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089456</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26967.html">CELL.LOOP.START.FAIL.DROPS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM397:Call Drops due to local switching Start Failure</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089457</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1766.html">CELL.CALL.DROPS.LOOP.HO.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM398:Call Drops due to Handover Failure During the local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089458</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1767.html">CELL.CALL.DROPS.CONN.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3701:Call Drops due to Connection Failures in Stable BSC local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089459</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1768.html">CELL.CALL.DROPS.CONN.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3801:Call Drops due to Connection Failures in Stable BTS local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089460</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1769.html">CELL.CALL.DROPS.ERR.IND.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3700:Call Drops due to Error Indications in Stable BSC local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089461</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1770.html">CELL.CALL.DROPS.ERR.IND.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3800:Call Drops due to Error Indications in Stable BTS local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089462</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1771.html">CELL.CALL.DROPS.REL.IND.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3702:Call Drops due to Release Indications in Stable BSC local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089463</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1772.html">CELL.CALL.DROPS.REL.IND.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3802:Call Drops due to Release Indications in Stable BTS local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089464</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1773.html">CELL.CALL.DROPS.NO.MR.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M372:Call Drops due to No MRs from MS in Stable BSC local switching
+State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089465</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1774.html">CELL.CALL.DROPS.NO.MR.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M382:Call Drops due to No MRs from MS in Stable BTS local switching
+State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089466</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1775.html">CELL.CALL.DROPS.FORCE.HO.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M375:Call Drops due to Forced Handovers in Stable BSC local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089467</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1776.html">CELL.CALL.DROPS.FORCE.HO.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M385:Call Drops due to Forced Handovers in Stable BTS local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089468</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1777.html">CELL.CALL.DROPS.ABIS.LNK.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M373:Call Drops due to Abis Terrestrial Link Failure in Stable BSC
+local switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089469</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1778.html">CELL.CALL.DROPS.ABIS.LNK.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M383:Call Drops due to Abis Terrestrial Link Failure in Stable BTS
+local switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089470</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1779.html">CELL.CALL.DROPS.EQUIP.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M374:Call Drops due to Equipment Failures in Stable BSC local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089471</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1780.html">CELL.CALL.DROPS.EQUIP.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M384:Call Drops due to Equipment Failures in Stable BTS local
+switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089472</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-26968.html">CELL.TRAF.CH.STATIC.STATE.CALL.DROPS.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM370:Call Drops in Stable BSC local switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089473</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-26969.html">CELL.TRAF.CH.STATIC.STATE.CALL.DROPS.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM380:Call Drops in Stable BTS local switching State</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089474</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1781.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3751:Call Drops due to Failures to Return to Normal Call from BSC
+local switching (Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089475</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1782.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3851:Call Drops due to Failures to Return to Normal Call from BTS
+local switching (Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089476</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1783.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.BSC.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3752:Call Drops due to Failures to Return to Normal Call from BSC
+local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089477</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1784.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.BTS.LOOP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3852:Call Drops due to Failures to Return to Normal Call from BTS
+local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089478</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26970.html">CELL.LOOP.RESTORE.FAIL.DROPS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM385:Call Drops due to Failures to Return to Normal Call from
+local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089479</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26971.html">CELL.LOOP.DROPS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM390:Call Drops During local switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089480</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1785.html">CELL.CALL.DROPS.BSCLOOP.FAIL.APPLY.TRSL.FAIL.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3120:Call Drops on TCHF Due to BSC local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089481</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1786.html">CELL.CALL.DROPS.BSCLOOP.FAIL.APPLY.TRSL.FAIL.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3220:Call Drops on TCHH Due to BSC local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089482</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1787.html">CELL.CALL.DROPS.BSCLOOP.FAIL.OTHER.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3121:Call Drops on TCHF Due to BSC local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089483</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1788.html">CELL.CALL.DROPS.BSCLOOP.FAIL.OTHER.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3221:Call Drops on TCHH Due to BSC local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089484</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1789.html">CELL.CALL.DROPS.BTSLOOP.FAIL.APPLY.TRSL.FAIL.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3120a:Call Drops on TCHF Due to BTS local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089485</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1790.html">CELL.CALL.DROPS.BTSLOOP.FAIL.APPLY.TRSL.FAIL.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3220a:Call Drops on TCHH Due to BTS local switching Start Failure
+(Terrestrial Resource Request Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089486</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1791.html">CELL.CALL.DROPS.BTSLOOP.FAIL.BTS.FAIL.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3121a:Call Drops on TCHF Due to BTS local switching Start Failure
+(Failures on the BTS Side)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089487</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1792.html">CELL.CALL.DROPS.BTSLOOP.FAIL.BTS.FAIL.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3221a:Call Drops on TCHH Due to BTS local switching Start Failure
+(Failures on the BTS Side)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089488</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1793.html">CELL.CALL.DROPS.BTSLOOP.FAIL.OTHER.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3122:Call Drops on TCHF Due to BTS local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089489</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1794.html">CELL.CALL.DROPS.BTSLOOP.FAIL.OTHER.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3222:Call Drops on TCHH Due to BTS local switching Start Failure
+(Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089490</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1795.html">CELL.CALL.DROPS.LOOP.FAIL.TIMEOUT.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M310:Call Drops on TCHF Due to local switching Start Failure (Timer
+Expired)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089491</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1796.html">CELL.CALL.DROPS.LOOP.FAIL.TIMEOUT.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M320:Call Drops on TCHH Due to local switching Start Failure (Timer
+Expired)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089492</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1797.html">CELL.CALL.DROPS.LOOP.HO.FAIL.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM318:Call Drops on TCHF Due to Handover Failure During the local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089493</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1798.html">CELL.CALL.DROPS.LOOP.HO.FAIL.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CM328:Call Drops on TCHH Due to Handover Failure During the local
+switching</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089494</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1799.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.TIMES.BSC.LOOP.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3151:Call Drops on TCHF Due to Failures to Return to Normal Call
+from BSC local switching (Terrestrial Resource Request
+Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089495</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1800.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.TIMES.BSC.LOOP.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3251:Call Drops on TCHH Due to Failures to Return to Normal Call
+from BSC local switching (Terrestrial Resource Request
+Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089496</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1801.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.TIMES.BTS.LOOP.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3151a:Call Drops on TCHF Due to Failures to Return to Normal Call
+from BTS local switching (Terrestrial Resource Request
+Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089497</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1802.html">CELL.CALL.DROPS.LOOP.RESTORE.APPLY.TRSL.FAIL.TIMES.BTS.LOOP.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3251a:Call Drops on TCHH Due to Failures to Return to Normal Call
+from BTS local switching (Terrestrial Resource Request
+Failure)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089498</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1803.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.TIMES.BSC.LOOP.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3152:Call Drops on TCHF Due to Failures to Return to Normal Call
+from BSC local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089499</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1804.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.TIMES.BSC.LOOP.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3252:Call Drops on TCHH Due to Failures to Return to Normal Call
+from BSC local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089500</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1805.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.TIMES.BTS.LOOP.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3152a:Call Drops on TCHF Due to Failures to Return to Normal Call
+from BTS local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089501</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1806.html">CELL.CALL.DROPS.LOOP.RESTORE.OTHER.FAIL.TIMES.BTS.LOOP.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3252a:Call Drops on TCHH Due to Failures to Return to Normal Call
+from BTS local switching (Others)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089502</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1807.html">CELL.LOCALSWITCH.LOOP.FAIL.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3828:Number of local switching Start Failures (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089503</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1808.html">CELL.LOCALSWITCH.RESTORE.TRY.BSC.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3842:Number of Attempts to Return to Normal Call from BSC local
+switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089504</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1809.html">CELL.LOCALSWITCH.RESTORE.TRY.BTS.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3843:Number of Attempts to Return to Normal Call from BTS local
+switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089505</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1810.html">CELL.LOCALSWITCH.LOOP.FAIL.BSC.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3850c:Number of Failures to Return to Normal Call from BSC local
+switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089506</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1811.html">CELL.LOCALSWITCH.LOOP.RESTORE.FAIL.BTS.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+R3851c:Number of Failures to Return to Normal Call from BTS local
+switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089507</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1812.html">CELL.CALL.DROPS.LOOP.RESTORE.FAIL.BSC.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3753:Call Drops due to Failures to Return to Normal Call from BSC
+local switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278089508</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1813.html">CELL.CALL.DROPS.LOOP.RESTORE.FAIL.BTS.LOOP.SERVICE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+M3853:Call Drops due to Failures to Return to Normal Call from BTS
+local switching (Service)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Counter Relationship</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

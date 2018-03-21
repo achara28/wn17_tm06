@@ -1,0 +1,86 @@
+@(generatorInfo: String)
+
+@import util.UIUtils
+
+@main("Job Editor") {
+
+    <pre id="editor" class="editor">
+        @generatorInfo
+    </pre>
+
+    <!-- /.panel-body -->
+
+    <div class="row">
+        <div class="col-lg-12">
+                <!-- Connected clients -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-users fa-fw"></i>
+                    Options
+                </div>
+                    <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <button class="btn btn-primary" id="saveButton" >Save</button>
+                        <button class="btn btn-default" id="undoButton">Undo</button>
+                        <button class="btn btn-default" id="redoButton">Redo</button>
+                        <button class="btn btn-danger" id="clearButton">Clear</button>
+                    </div>
+                        <!-- /.list-group -->
+                </div>
+                    <!-- /.panel-body -->
+            </div>
+                <!-- /.panel -->
+        </div>
+            <!-- /.col-lg-12 -->
+    </div>
+    <!-- jQuery -->
+    <script type="text/javascript" src="@routes.Assets.at("bower_components/jquery/dist/jquery.min.js")"></script>
+
+    <script src="@routes.Assets.at("ace/src-noconflict/ace.js")" type="text/javascript"
+    charset="utf-8"></script>
+
+    <script>
+
+
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.getSession().setMode("ace/mode/scala");
+
+    $('#undoButton').click(function(evt) {
+        editor.undo();
+        return false;
+    });
+
+     $('#redoButton').click(function(evt) {
+        editor.redo();
+        return false;
+    });
+    $('#clearButton').click(function(evt) {
+        editor.getSession().setValue("");
+        return false;
+    });
+
+    $('#saveButton').click(function(evt) {
+        $('#errors').hide();
+        $.ajax({
+            type : 'POST',
+            url : "/save",
+            data : JSON.stringify({"data": editor.getValue()}),
+            contentType: "application/json; charset=utf-8",
+            dataType : "application/json",
+            success : function(data) {
+                //setError('Call succedded');
+                //$('#test1').attr("src", data)
+                console.log(data);
+            },
+            error : function(data) {
+                 console.log(data);
+            }
+        });
+        return false;
+    });
+</script>
+
+
+}

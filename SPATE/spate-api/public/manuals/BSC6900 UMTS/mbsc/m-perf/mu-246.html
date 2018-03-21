@@ -1,0 +1,1283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="reference" />
+<meta name="DC.Title" content=
+"Measurement of RB Procedure per RNC(RB.RNC)" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mu-246" />
+<meta name="DC.Language" content="en-us" />
+<title>Measurement of RB Procedure per RNC(RB.RNC)</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mu-246.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-246.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-246.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mu-246" id="Mu-246"></a><a name="Mu-246" id="Mu-246"></a>
+<h1 class="topictitle1">Measurement of RB Procedure per
+RNC(RB.RNC)</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Overview</h4>
+
+<p>The CS domain has four types of services, namely, conversational
+service, streaming service, interactive service, and background
+service. At present, it only supports the first two services. The
+conversational service supports eight variable rates and the
+streaming service supports three variable rates.</p>
+
+<p>The PS domain carried on the DCH also has the same four types of
+services, among which the conversational service supports eight
+variable rates, the streaming service supports eight variable
+rates, the interactive service supports eight variable rates, and
+the background service supports eight variable-rates.</p>
+
+<p>UTRAN can provide different rates according to the resource
+status and requirement type. If the RRC state of service switches
+from CELL_DCH to other states, the measurement item decreases by
+one. If the RRC state of service switches from other states to
+CELL_DCH, the measurement item increases by one. If the RRC state
+of service switches from CELL_DCH to CELL_DCH and the bandwidth is
+adjusted, the old measurement item decreases by one and the new one
+increases by one.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.1">
+ID</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.2">
+Counter</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.3">
+Description</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.4">
+Original Release</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202577</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202580</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202583</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202586</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202589</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202592</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202595</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202598</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202604</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202607</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202610</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202613</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202616</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202619</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202625</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202628</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202631</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202634</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202637</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202640</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202643</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202646</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.256.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 256 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202649</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202652</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202655</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202658</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202661</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202664</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.DL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with DL Rate
+of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202667</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202670</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.256.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 256 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202673</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202676</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202679</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202682</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202685</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202688</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27764.html">VS.RB.PS.Int.UL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Interactive Services with UL Rate
+of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202691</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202694</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.256.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 256 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202697</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202700</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202703</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202706</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202709</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202712</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.DL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with DL Rate
+of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202715</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202718</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.256.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 256 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202721</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.144.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 144 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202724</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.128.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 128 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202727</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202730</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.32.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 32 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202733</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.16.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 16 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202736</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27780.html">VS.RB.PS.Bkg.UL.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Background Services with UL Rate
+of 8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202739</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27796.html">VS.RB.CS.Str.DL.57.6.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for CS Streaming Services with DL Rate of
+57.6 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202748</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27796.html">VS.RB.CS.Str.UL.57.6.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for CS Streaming Services with UL Rate of
+57.6 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202766</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27805.html">VS.RB.CS.Conv.DL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for CS Conversational Services with DL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202778</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27805.html">VS.RB.CS.Conv.UL.64.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for CS Conversational Services with UL Rate
+of 64 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67192444</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4807.html">VS.DRD.RB.D2H.Att.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Number of DCH-to-HSDPA Directed Retry Attempts for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67192445</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-4808.html">VS.DRD.RB.D2H.Succ.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Number of Successful DCH-to-HSDPA Directed Retry for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202601</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.DL.256.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with DL Rate of
+256 Kbit/s or 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67202622</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27810.html">VS.RB.PS.Str.UL.256.384.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Streaming Services with UL Rate of
+256 Kbit/s or 384 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204798</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.38.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 38.8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204799</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.39.2.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 39.2 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204800</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.40.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 40 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204801</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.DL.42.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with DL
+Rate of 42.8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204802</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.38.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 38.8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204803</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.39.2.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 39.2 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204804</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.40.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 40 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+67204805</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27744.html">VS.RB.PS.Conv.UL.42.8.RNC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Average Number of RBs for PS R99 Conversational Services with UL
+Rate of 42.8 Kbit/s for RNC</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Counter Relationship</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

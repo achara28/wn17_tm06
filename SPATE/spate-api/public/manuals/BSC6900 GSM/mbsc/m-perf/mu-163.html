@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="reference" />
+<meta name="DC.Title" content=
+"Neighbor Cell Level Measurement per Cell(MR.NCellLevl.NCELL)" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mu-163" />
+<meta name="DC.Language" content="en-us" />
+<title>Neighbor Cell Level Measurement per
+Cell(MR.NCellLevl.NCELL)</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mu-163.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-163.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-163.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mu-163" id="Mu-163"></a><a name="Mu-163" id="Mu-163"></a>
+<h1 class="topictitle1">Neighbor Cell Level Measurement per
+Cell(MR.NCellLevl.NCELL)</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Overview</h4>
+
+<p>The measurement unit is used to measure the mean receive level
+of the neighbor cell. You can determine whether to configure the
+neighbor relation based on this measurement.</p>
+
+<p>The neighbor cell can be classified into two types: defined
+neighbor cell and undefined neighbor cell.</p>
+
+<p>Defined neighbor cell refers to the cell whose BCCH frequency is
+contained in the BA table of the BSC and that is configured as a
+neighbor cell of the present cell in the neighbor relation
+list.</p>
+
+<p>Undefined neighbor cell refers to the cell whose BCCH frequency
+is contained in the BA table of the BSC (manually added by the
+user) but that is not configured as a neighbor cell of the present
+cell in the neighbor relation list.</p>
+
+<p>When measuring the information of defined neighbor cells, the
+measurement unit is used to measure the redundant cells. When
+measuring the information of undefined neighbor cells, the
+measurement unit is used to measure the miss-configured cells.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.1">
+ID</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.2">
+Counter</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.3">
+Description</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.4">
+Original Release</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272417</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3347.html">CELL.NCELL.LEV</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S360:Strength of Signals in Neighbor Cells</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272418</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3348.html">CELL.NCELL.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S361:MRs of Neighbor Cells</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272419</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27341.html">CELL.NCELL.LEV.AVR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+AS360:Mean Strength of Signals in Neighbor Cells</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272420</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3349.html">CELL.SCELL.LEV</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S362:Strength of Signals in Serving Cells</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272421</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3350.html">CELL.SCELL.NCELL.LEV.LESS.THRES1.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S363:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Smaller Than the Neighbor
+Cell Interference Level Threshold 1</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272422</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES1.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S364:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 1</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272423</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES2.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S365:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 2</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272424</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES3.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S366:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 3</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272425</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES4.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S367:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 4</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272426</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES5.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S368:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 5</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272427</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES6.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S369:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 6</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272428</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3351.html">CELL.SCELL.NCELL.LEV.GT.THRES7.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S370:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Greater Than the Neighbor
+Cell Interference Level Threshold 7</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272429</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-27342.html">CELL.SCELL.NCELL.DIFF.LEV.AVR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+AS362:Mean Signal Strength Difference Between Serving Cell and
+Neighbor Cell</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272430</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3358.html">CELL.NCELL.SCELL.LEV.GT.RTHRES.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S371:Measurement Reports with Signal Strength Difference Between
+Neighbor Cell and Serving Cell Greater Than Relative Level
+Threshold</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272431</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3359.html">CELL.NCELL.LEV.GT.ABS.THRES.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S372:Measurement Reports with Signal Strength of Neighbor Cell
+Greater Than Absolute Level Threshold</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272445</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.0</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S386:Number of MRs on Competitive Cell (Receive Level Rank 0)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272446</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.1</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S387:Number of MRs on Competitive Cell (Receive Level Rank 1)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272447</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.2</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S388:Number of MRs on Competitive Cell (Receive Level Rank 2)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272448</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.3</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S389:Number of MRs on Competitive Cell (Receive Level Rank 3)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272449</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.4</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S390:Number of MRs on Competitive Cell (Receive Level Rank 4)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272450</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.5</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S391:Number of MRs on Competitive Cell (Receive Level Rank 5)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272451</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.6</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S392:Number of MRs on Competitive Cell (Receive Level Rank 6)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272452</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3372.html">CELL.NCELL.LEVEL.7</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S393:Number of MRs on Competitive Cell (Receive Level Rank 7)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278272453</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-3380.html">CELL.SCELL.NCELL.LEV.LESS.THRES0.MR.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+S394:Number of MRs in Which the Signal Strength Difference Between
+the Serving Cell and the Neighbor Cell Is Smaller Than the Neighbor
+Cell Interference Level Threshold 0</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Counter Relationship</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

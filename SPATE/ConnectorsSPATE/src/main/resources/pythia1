@@ -1,0 +1,5 @@
+login-type = password
+username = canast02
+password = spark
+command-timeout = 1200000
+fingerprint = any

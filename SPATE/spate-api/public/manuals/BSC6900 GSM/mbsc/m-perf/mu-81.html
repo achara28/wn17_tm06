@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="reference" />
+<meta name="DC.Title" content=
+"Outgoing Inter-RAT Inter-Cell Handover Measurement per Cell (TDD)(CALL.InterRanTDDOutCellHo.CELL)" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mu-81" />
+<meta name="DC.Language" content="en-us" />
+<title>Outgoing Inter-RAT Inter-Cell Handover Measurement per Cell
+(TDD)(CALL.InterRanTDDOutCellHo.CELL)</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mu-81.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-81.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmu-81.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mu-81" id="Mu-81"></a><a name="Mu-81" id="Mu-81"></a>
+<h1 class="topictitle1">Outgoing Inter-RAT Inter-Cell Handover
+Measurement per Cell (TDD)(CALL.InterRanTDDOutCellHo.CELL)</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Overview</h4>
+
+<p>The Outgoing Inter-RAT Inter-Cell Handover (TDD) per Cell is
+classified into Outgoing Inter-RAT Inter-Cell Handover (TDD)
+(Excluding Directed Retry) and Outgoing Inter-RAT Inter-Cell
+Handover (TDD) (Directed Retry).</p>
+
+<p>The following is the block diagram that shows the measurement
+points of the counters related to outgoing inter-RAT inter-cell
+handover (TDD).</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 1</b> Block
+diagram of outgoing inter-RAT inter-cell handover (TDD) measurement
+procedure</span><br />
+<span><img src="images/gcell-callimage052.gif" /></span><br />
+</div>
+
+<div class="fignone"><span class="figcap"><b>Figure 2</b>
+Measurement of the counters related to outgoing inter-RAT
+inter-cell handover (excluding directed retry) (TDD)</span><br />
+<span><img src="images/gcell-callimage021.gif" /></span><br />
+</div>
+
+<p>Table 2 describes the measurement points shown in Figure2.</p>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="50%" id=
+"mcps1.2.1.8.1.3.1.1">Measurement points</th>
+<th class="cellrowborder" valign="top" width="50%" id=
+"mcps1.2.1.8.1.3.1.2">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.1">A</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.2">Measurement point of Outgoing Inter-RAT
+Inter-Cell Handover Requests (Excluding Directed Retry) (TDD)</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.1">B</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.2">Measurement point of Outgoing Inter-RAT
+Inter-Cell Handover Responses (Excluding Directed Retry) (TDD)</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.1">C</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.8.1.3.1.2">Measurement point of Successful Outgoing
+Inter-RAT Inter-Cell Handovers (Excluding Directed Retry)
+(TDD)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Outgoing inter-RAT inter-cell handover (TDD) (excluding directed
+retry)</p>
+
+<p>After receiving measurement reports from the MS, the BSC that
+controls the originating cell (hereinafter referred to as BSC2)
+decides whether a handover is required according to the handover
+algorithm based on the load and signal interference in the serving
+cell, and the signal quality and receive/transmit level in the
+measurement report. If a handover is required based on the handover
+algorithm, a handover triggering indication is sent to the service
+process handling module to notify the module to initiate the
+handover procedure. If the target cell of the handover is a
+TD-SCDMA (hereinafter TD for short) cell, the outgoing inter-RAT
+inter-cell handover (TDD) is initiated.</p>
+
+<p>BSC2 sends an HO RQD message to the corresponding MSC
+(hereinafter referred to as MSC2), indicating MSC2 to notify the TD
+system of the handover initiation. According to its own data
+configurations, MSC2 finds MSC1 in the TD system and sends a
+handover request to MSC1. After the TD system is ready for
+receiving the request, MSC2 is informed of the readiness. Then,
+MSC2 sends an HO CMD message to BSC2, indicating BSC2 to notify the
+MS of the handover initiation. Through the originating cell, BSC2
+sends an HO CMD message to the MS, indicating the MS to access the
+target cell. After the MS accesses the target cell normally, MSC1
+informs MSC2 that the inter-RAT outgoing cell handover is complete.
+Then, MSC2 sends a CLEAR CMD message to BSC2. After releasing the
+resources in the originating cell, BSC2 responds to MSC2 with a CLR
+CMP message. The outgoing inter-RAT inter-cell handover (TDD) is
+completed.</p>
+
+<p>Figure 2 shows the measurement of the counters related to
+outgoing inter-RAT inter-cell handover (excluding directed retry)
+(TDD).</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 3</b>
+Measurement of the counters related to outgoing inter-RAT
+inter-cell handover (directed retry) (TDD)</span><br />
+<span><img src="images/gcell-callimage022.gif" /></span><br />
+</div>
+
+<p>Table 3 describes the measurement points shown in Figure3.</p>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="50%" id=
+"mcps1.2.1.15.1.3.1.1">Measurement points</th>
+<th class="cellrowborder" valign="top" width="50%" id=
+"mcps1.2.1.15.1.3.1.2">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.1">A</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.2">Measurement point of Outgoing Inter-RAT
+Inter-Cell Handover Requests (Directed Retry) (TDD)</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.1">B</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.2">Measurement point of Outgoing Inter-RAT
+Inter-Cell Handover Responses (Directed Retry) (TDD)</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.1">C</td>
+<td class="cellrowborder" valign="top" width="50%" headers=
+"mcps1.2.1.15.1.3.1.2">Measurement point of Successful Outgoing
+Inter-RAT Inter-Cell Handovers (Directed Retry) (TDD)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Outgoing inter-RAT inter-cell handover (TDD) (directed
+retry)</p>
+
+<p>When the MS initiates a call, BSC2 (where the MS belongs)
+determines the assignment procedure based on the load in the
+serving cell if BSC2 receives an ASSIGN REQ message from MSC2
+(where the BSC2 belongs). Generally, there are three assignment
+procedures: normal assignment, directed retry, and mode
+modification. If the load of the cell is so high that the cell
+cannot admit a new service or that a new admitted service will
+affect the current services, BSC2 decides to perform a directed
+retry. If the target cell selected during the directed retry
+belongs to the TD system, BSC2 initiates an outgoing inter-RAT
+inter-cell handover procedure in the originating cell.</p>
+
+<p>After that, BSC2 sends an HO RQD message to MSC2, indicating
+MSC2 to notify the TD system of the handover initiation. Based on
+its data configuration, MSC2 finds MSC1 in the TD system and sends
+a handover request to MSC1. When the TD system is ready for
+receiving the handover request, it informs MSC2. Then, MSC2 sends
+an HO CMD message to BSC2, indicating BSC2 to notify the MS of the
+handover initiation. BSC2 sends an HO CMD message to the MS in the
+originating cell, requesting the MS to access the target cell. When
+the MS accesses the target cell successfully, MSC1 notifies MSC2 of
+the completion of incoming inter-RAT inter-cell handover (TDD).
+Then, MSC2 sends a CLEAR CMD message to BSC2. After releasing the
+resources in the originating cell, BSC2 returns a CLR CMP message
+to MSC2. Thus, the outgoing inter-RAT inter-cell handover (TDD) in
+the directed retry procedure is completed.</p>
+
+<p>Figure 3 shows the measurement of the counters related to
+outgoing inter-RAT inter-cell handover (directed retry) (TDD).</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.1">
+ID</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.2">
+Counter</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.3">
+Description</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.2.2.1.1.1.4">
+Original Release</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092417</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1351.html">CELL.INTERRAN.TDD.OUTCELL.HO.REQ.NOT.INCLUDE.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35001:Outgoing Inter-RAT Inter-Cell Handover Requests (SDCCH)
+(Excluding Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092418</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1351.html">CELL.INTERRAN.TDD.OUTCELL.HO.REQ.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35071:Outgoing Inter-RAT Inter-Cell Handover Requests (TCHF)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092419</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1351.html">CELL.INTERRAN.TDD.OUTCELL.HO.REQ.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35081:Outgoing Inter-RAT Inter-Cell Handover Requests (TCHH)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092420</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1354.html">CELL.INTERRAN.TDD.OUTCELL.HO.CMD.NOT.INCLUDE.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35101:Outgoing Inter-RAT Inter-Cell Handover Commands (SDCCH)
+(Excluding Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092421</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1354.html">CELL.INTERRAN.TDD.OUTCELL.HO.CMD.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35171:Outgoing Inter-RAT Inter-Cell Handover Commands (TCHF)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092422</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1354.html">CELL.INTERRAN.TDD.OUTCELL.HO.CMD.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35181:Outgoing Inter-RAT Inter-Cell Handover Commands (TCHH)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092423</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.NOT.INCLUDE.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35201:Failed Outgoing Inter-RAT Inter-Cell Handovers (SDCCH)
+(Excluding Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092424</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.TCHF</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35271:Failed Outgoing Inter-RAT Inter-Cell Handovers (TCHF)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092425</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.TCHH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35281:Failed Outgoing Inter-RAT Inter-Cell Handovers (TCHH)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092426</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.ABNORM.REL.UNS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Da1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Abnormal Release, Unspecified)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092427</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.ABNORM.REL.CHN</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Db1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Abnormal Release, Channel
+Unacceptable) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092428</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.ABNORM.REL.T.E</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dc1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Abnormal Release, Timer Expired)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092429</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.ABNORM.REL.NO.ACT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dd1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Abnormal Release, No Activity on
+the Radio Path) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092430</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.PREEMPT.RLS</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352De1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Preemptive Release) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092431</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.HO.TA</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Df1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Handover Failed, Timing Advance out
+of Range) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092432</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.NO.CH.MODE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dg1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Channel Mode Unavailable)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092433</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.FREQ</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dh1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Frequency Unavailable) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092434</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.CALL.CLR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Di1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Call Already Cleared) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092435</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.SEMANT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dj1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Semantically Incorrect Message)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092436</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.INV.MAN</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dk1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Invalid Mandatory Information)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092437</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.MSG.TYPE.NEXISTENT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dl1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Message Type Non-existent or Not
+Implemented) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092438</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.MSG.TYPE.NOT.COMPATIBLE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dm1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Message Type Not Compatible with
+Protocol State) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092439</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.CONDITION.IE.ERR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dn1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Conditional IE Error) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092440</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.NO.CA</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Do1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (No Cell Allocation Available)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092441</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.PROTOCL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dp1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Protocol Error Unspecified)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092442</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MS.RPT.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Dq1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (Other Causes) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092443</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.OM.INTERVENTION</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Ka1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (OM Intervention) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092444</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.EQUIP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kb1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Equipment Failure) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092445</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.NO.RADIO.RES</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kc1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (No Radio Resource Available) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092446</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.REQ.NO.TER.RES</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kd1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Requested Terrestrial Resource Unavailable)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092447</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.BSS.NOT.EQUIP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Ke1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (BSS not Equipped) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092448</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.INVAILD.CELL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kf1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Invalid Cell) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092449</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.REQ.TRANSC.UNAIVL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kg1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Requested Transcoding/Rate Adaption Unavailable)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092450</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.CIR.POOL.MISMATCH</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kh1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Circuit Pool Mismatch) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092451</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.REQ.NO.SV</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Ki1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Requested Speech Version Unavailable) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092452</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.CIPH.ALG.NOT.SUPT</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kj1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Ciphering Algorithm not Supported) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092453</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.TER.CIR.ALRDY.ALLOC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kk1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Terrestrial circuit already allocated)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092454</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.INVAILD.MSG</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kl1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Invalid Message) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092455</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.PROTOCOL.ERR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Km1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Protocol Error between BSS and MSC) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092456</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.HO.REJ.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Kn1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (Other Causes) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092457</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.RADIO.INTF.MSG.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Ha1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Radio Interface Message Failure) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092458</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.RADIO.INTF.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hb1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Radio Interface Failure) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092459</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.OM.INTERVENTION</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hc1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (OM Intervention) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092460</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.EQUIP.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hd1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Equipment Failure) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092461</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.PREEMPTION</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352He1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Preemption) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092462</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.INVALID.MSG</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hf1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Invalid Message) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092463</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.PROTOCOL.ERR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hg1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Protocol Error between BSS and MSC)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092464</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.CLR.CMD.OTHER</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352Hh1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (Other Causes) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092465</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.A.INTERF.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352G1:Failed Outgoing Inter-RAT Inter-Cell Handovers (A Interface
+Failure) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092466</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.T7.EXP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352L1:Failed Outgoing Inter-RAT Inter-Cell Handovers (T7 Expired)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092467</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.T8.EXP</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H352C1:Failed Outgoing Inter-RAT Inter-Cell Handovers (T8 Expired)
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092468</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26822.html">CELL.INTERRAN.TDD.OUTCELL.HO.REQ</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH3501:Outgoing Inter-RAT Inter-Cell Handover Requests (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092469</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26823.html">CELL.INTERRAN.TDD.OUTCELL.HO.SUCC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH3531:Successful Outgoing Inter-RAT Inter-Cell Handovers
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092470</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26824.html">CELL.INTERRAN.TDD.OUTCELL.HO.SUCC.RATE</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+TH3531:Success Rate of Outgoing Inter-RAT Inter-Cell Handover
+(TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092471</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26825.html">CELL.INTERRAN.TDD.OUTCELL.HO.CMD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH3511:Outgoing Inter-RAT Inter-Cell Handover Commands (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092472</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-26826.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH3521:Failed Outgoing Inter-RAT Inter-Cell Handovers (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092473</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-26827.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.RECONN.SUCC</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH352D1:Failed Outgoing Inter-RAT Inter-Cell Handovers
+(Reconnection to Old Channels) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092474</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-26828.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.REQ.REJ</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH352K1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Handover
+Request Rejected) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092475</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href=
+"mt-26829.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.MSC.CLR</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH352H1:Failed Outgoing Inter-RAT Inter-Cell Handovers (Clear
+Commands Sent By MSC) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092478</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1351.html">CELL.INTERRAN.TDD.OUTCELL.HO.REQ.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35001A:Outgoing Inter-RAT Inter-Cell Handover Requests (SDCCH)
+(Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092479</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1354.html">CELL.INTERRAN.TDD.OUTCELL.HO.CMD.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35101A:Outgoing Inter-RAT Inter-Cell Handover Commands (SDCCH)
+(Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092480</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1357.html">CELL.INTERRAN.TDD.OUTCELL.HO.FAIL.DR.SD</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+H35201A:Failed Outgoing Inter-RAT Inter-Cell Handovers (SDCCH)
+(Directed Retry) (TDD)</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092477</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1405.html">CELL.SUPPORT.FDD.MS.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH354A:Number Of MS support FDD</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+1278092476</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+<a href="mt-1406.html">CELL.SUPPORT.TDD.MS.NUM</a>
+</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+CH355A:Number Of MS support TDD</td>
+<td class="cellrowborder" valign="top" headers=
+"mcps1.2.2.2.1.1.1.1 mcps1.2.2.2.1.1.1.2 mcps1.2.2.2.1.1.1.3 mcps1.2.2.2.1.1.1.4">
+Earlier than V900R011</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Counter Relationship</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

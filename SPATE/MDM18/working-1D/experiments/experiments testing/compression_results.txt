@@ -1,0 +1,30 @@
+------------------------------------
+Experiments for counters
+------------------------------------
+
+------------------------------------
+Counter : 73424223
+------------------------------------
+Total size of 2216808
+Total memory: 2216808 
+Total records: 25191
+slicedDf.txt.gz contains 310201 bytes of compressed data 
+------------------------------------
+
+------------------------------------
+Counter : 73423494
+------------------------------------
+Total size of 2216808
+Total memory: 2216808 
+Total records: 25191
+slicedDf.txt.gz contains 316666 bytes of compressed data 
+------------------------------------
+
+------------------------------------
+Counter : 73423510
+------------------------------------
+Total size of 2216808
+Total memory: 2216808 
+Total records: 25191
+slicedDf.txt.gz contains 311701 bytes of compressed data 
+------------------------------------

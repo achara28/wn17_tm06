@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="pmiref" />
+<meta name="DC.Title" content=
+"Number of Successful Uplink GPRS TBF Establishments" />
+<meta name="DC.subject" content="UP.GPRS.TBF.ESTABLISH.SUCC" />
+<meta name="keywords" content="UP.GPRS.TBF.ESTABLISH.SUCC" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mt-3086" />
+<meta name="DC.Language" content="en-us" />
+<title>Number of Successful Uplink GPRS TBF Establishments</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mt-3086.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-3086.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-3086.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mt-3086" id="Mt-3086"></a><a name="Mt-3086" id=
+"Mt-3086"></a>
+<h1 class="topictitle1">Number of Successful Uplink GPRS TBF
+Establishments</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.1">ID</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.2">Counter</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.3">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.1">1279173418</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.2">UP.GPRS.TBF.ESTABLISH.SUCC</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.3">A9002:Number of Successful Uplink
+GPRS TBF Establishments</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Description</h4>
+
+<p>This measurement provides the number of successful uplink GPRS
+TBF establishments for services including the DTM service during a
+measurement period. A low measurement value indicates that the
+radio environment, network parameter configuration, network
+resource configuration, or network equipment is not satisfactory,
+and therefore requires optimization. Further analysis should be
+made based on the causes of GPRS TBF abnormal release. Together
+with Number of Uplink GPRS TBF Establishment Attempts, this
+measurement indicates the uplink assignment success rate during a
+measurement period. Together with Number of Uplink GPRS TBF
+Abnormal Releases due to N3101 Overflow (MS No Response), this
+measurement indicates the call drop rate of the uplink TBF during a
+measurement period.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement point</h4>
+
+<p>The successful uplink GPRS TBF establishments involve the
+following aspects:</p>
+
+<p>Successful uplink GPRS TBF establishment using one phase
+access</p>
+
+<p>After sending the IMMEDIATE ASSIGNMENT message, if the BSC
+receives the uplink blocks on the channel allocated to the MS, it
+means that the uplink GPRS TBF establishment using one phase access
+is successful.</p>
+
+<p>Figure 1 shows the procedure of uplink GPRS TBF establishment
+using one phase access. Each time the BSC receives the first uplink
+block from the MS after sending the IMMEDIATE ASSIGNMENT message
+(see measurement point C), the counter is incremented by one.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 1</b> One phase
+packet access request received on the RACH</span><br />
+<span><img src="images/a9402.gif" /></span><br />
+</div>
+
+<p>Successful uplink GPRS TBF establishment using single block
+access</p>
+
+<p>After sending the PACKET UPLINK ASSIGNMENT message, if the BSC
+receives the uplink data blocks on the channel allocated to the MS,
+it means that the uplink GPRS TBF establishment using single block
+access is successful.</p>
+
+<p>Figure 2 shows the procedure of uplink GPRS TBF establishment
+using single block access. Each time the BSC receives the first
+uplink block from the MS after sending the PACKET UPLINK ASSIGNMENT
+message (see measurement point E), the counter is incremented by
+one.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 2</b> Single
+block packet access request received on the RACH</span><br />
+<span><img src="images/a9403.gif" /></span><br />
+</div>
+
+<p>Successful uplink GPRS TBF establishment on the PACCH(Uplink
+GPRS TBF establishment in a downlink GPRS TBF)</p>
+
+<p>When the MS initiates an uplink GPRS TBF establishment request
+on the PACCH, the BSC sends a PACKET UPLINK ASSIGNMENT message to
+the MS. If the BSC receives the uplink data blocks on the channel
+assigned to the MS, the uplink GPRS TBF establishment on the PACCH
+is successful.</p>
+
+<p>Figure 3 shows the procedure of uplink GPRS TBF establishment on
+the PACCH. When the BSC receives the uplink block sent from the MS
+after sending the PACKET UPLINK ASSIGNMENT message (see measurement
+point C), the counter is incremented by one.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 3</b>
+Successful uplink GPRS TBF establishment on the PACCH</span><br />
+<span><img src="images/a9411.gif" /></span><br />
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Formula</h4>
+
+<p>None</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Unit</h4>
+
+<p>None</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Related Features</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.1">Counter</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.2">Feature ID</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.3">Feature Name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.1">UP.GPRS.TBF.ESTABLISH.SUCC</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.2">
+<p>GBFD-114101</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.3">
+<p>GPRS</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

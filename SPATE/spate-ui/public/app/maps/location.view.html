@@ -1,0 +1,597 @@
+﻿<div ng-controller="LocationController as locations" class="main">
+    <div class="main">
+
+
+        <div id="export" class="modal fade" tabindex='-1'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Exported Data</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body…</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div id="map-wrapper">
+            <div id="sidebar" class="sidebar collapsed">
+                <!-- Nav tabs -->
+                <div class="sidebar-tabs">
+                    <ul role="tablist">
+                        <li><a href="#query1" role="tab"><span class="fa-stack"> <i class="fa">T1</i></span></a></li>
+                        <li><a href="#query3" role="tab"><span class="fa-stack"><i class="fa">T2</i></span></a></li>
+                        <li><a href="#query0" role="tab"><span class="fa-stack"><i class="fa">T3</i></span></a></li>
+                        <li><a href="#query2" role="tab"><span class="fa-stack"><i class="fa">T4</i></span></a></li>
+                        <!--<li><a href="#query4" role="tab"><span class="fa-stack"><i class="fa">T5</i></span></a></li>-->
+                        <!--<li><a href="#query5" role="tab"><span class="fa-stack"><i class="fa">T6</i></span></a></li>-->
+                        <!--<li><a href="#query6" role="tab"><span class="fa-stack"><i class="fa">T7</i></span></a></li>-->
+                        <!--<li><a href="#query7" role="tab"><span class="fa-stack"><i class="fa">T8</i></span></a></li>-->
+                        <li><a href="#mtn-map" role="tab"><i class="fa fa-hdd-o"></i></a></li>
+                        <li><a href="#search" role="tab"><i class="fa fa-search"></i></a></li>
+
+                    </ul>
+
+                    <ul role="tablist">
+                        <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+                        <li><a href="#logout" role="tab"><i class="glyphicon glyphicon-log-out"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Tab panes -->
+                <div class="sidebar-content">
+
+                    <div class="sidebar-pane" id="query1">
+                        <h1 class="sidebar-header">
+                            EQUALITY
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active">
+
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                              <button href="" class="btn navbar-btn btn-success live"
+                                                      data-toggle="tooltip"
+                                                      data-placement="left"
+                                                      title="When “Live” is green, presented results are based on measurements collected during the last 30 minutes.">
+                                                  Live
+                                              </button>
+                                        </span>
+
+
+                                        <input type="text" id="daterange" class="form-control navbar-btn daterange"/>
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"
+                                                ng-click="vm.valuationDatePickerOpen()">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+
+
+                                    <div class="input-group hidden">
+                                        <input type="text" class="form-control navbar-btn"
+                                               placeholder="e.g. CallingPartyNumber"
+                                               name="calling"
+                                               id="callingpartynumber">
+
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default navbar-btn" type="submit"><i
+                                                    class="glyphicon glyphicon-phone"></i>
+                                            </button>
+                                        </span>
+
+
+                                    </div>
+
+                                    <div class="input-group hidden">
+                                        <input type="text" class="form-control navbar-btn" placeholder="e.g. ProductID"
+                                               name="productid"
+                                               id="productid">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                    class="glyphicon glyphicon-barcode"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4>Choose DownFlux/UpFlux min-max values</h4>
+                                            <div id="maxmin"></div>
+                                        </div>
+                                        <div class="col-lg-6">
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Min Down/UpFlux Value (KB)"
+                                                       name="minspeed"
+                                                       id="minspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">KB (min)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Max Down/UpFlux Value (KB)"
+                                                       name="maxspeed"
+                                                       id="maxspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">KB (max)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="download" value="download"> Download
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="upload" value="upload" checked=""> Upload
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <br/>
+
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <button id="submitQuery" type="button" class="btn btn-success">Submit</button>
+                                        <button id="resetQuery" type="button" class="btn btn-default">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="querylegend"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="query3">
+                        <h1 class="sidebar-header">
+                            RANGE
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active">
+
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                              <button href="" class="btn navbar-btn btn-success live"
+                                                      data-toggle="tooltip"
+                                                      data-placement="left"
+                                                      title="When “Live” is green, presented results are based on measurements collected during the last 30 minutes.">
+                                                  Live
+                                              </button>
+                                        </span>
+
+
+                                        <input type="text" id="daterange" class="form-control navbar-btn daterange"/>
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"
+                                                ng-click="vm.valuationDatePickerOpen()">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+
+
+                                    <div class="input-group hidden">
+                                        <input type="text" class="form-control navbar-btn"
+                                               placeholder="e.g., 35799xxxxxx"
+                                               name="calling"
+                                               id="callingpartynumber">
+
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default navbar-btn" type="submit"><i
+                                                    class="glyphicon glyphicon-phone"></i>
+                                            </button>
+                                        </span>
+
+
+                                    </div>
+
+                                    <div class="input-group hidden">
+                                        <input type="text" class="form-control navbar-btn" placeholder="e.g. ProductID"
+                                               name="productid"
+                                               id="productid">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                    class="glyphicon glyphicon-barcode"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4>Choose DownFlux/UpFlux min-max values</h4>
+                                            <div id="maxmin"></div>
+                                        </div>
+                                        <div class="col-lg-6">
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Min Down/UpFlux Value (KB)"
+                                                       name="minspeed"
+                                                       id="minspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">KB (min)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Max Down/UpFlux Value (KB)"
+                                                       name="maxspeed"
+                                                       id="maxspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">KB (max)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="download" value="download"> Download
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="upload" value="upload" checked=""> Upload
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <br/>
+
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <button id="submitQuery" type="button" class="btn btn-success">Submit</button>
+                                        <button id="resetQuery" type="button" class="btn btn-default">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="querylegend"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="query0">
+                        <h1 class="sidebar-header">
+                            AGGREGATE
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active">
+
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                              <button href="" class="btn navbar-btn btn-success live"
+                                                      data-toggle="tooltip"
+                                                      data-placement="left"
+                                                      title="When “Live” is green, presented results are based on measurements collected during the last 30 minutes.">
+                                                  Live
+                                              </button>
+                                        </span>
+
+
+                                        <input type="text" id="daterange" class="form-control navbar-btn daterange"/>
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"
+                                                ng-click="vm.valuationDatePickerOpen()">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+
+
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="3g" value="3g"> 3G
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="2g" value="2g" checked=""> 2G
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <br/>
+
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <button id="submitQuery" type="button" class="btn btn-success">Submit</button>
+                                        <button id="resetQuery" type="button" class="btn btn-default">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="querylegend"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sidebar-pane" id="query2">
+                        <h1 class="sidebar-header">
+                            JOIN
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active">
+
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                              <button href="" class="btn navbar-btn btn-success live"
+                                                      data-toggle="tooltip"
+                                                      data-placement="left"
+                                                      title="When “Live” is green, presented results are based on measurements collected during the last 30 minutes.">
+                                                  Live
+                                              </button>
+                                        </span>
+
+
+                                        <input type="text" id="daterange" class="form-control navbar-btn daterange"/>
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"
+                                                ng-click="vm.valuationDatePickerOpen()">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+
+
+                                    <div class="btn-group btn-toggle" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="3g" value="3g"> 3G
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="2g" value="2g" checked=""> 2G
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <br/>
+
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <button id="submitQuery" type="button" class="btn btn-success">Submit</button>
+                                        <button id="resetQuery" type="button" class="btn btn-default">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="querylegend"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sidebar-pane" id="query4">
+                        <h1 class="sidebar-header">
+                            3G User Throughput
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active">
+
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                              <button href="" class="btn navbar-btn btn-success live"
+                                                      data-toggle="tooltip"
+                                                      data-placement="left"
+                                                      title="When “Live” is green, presented results are based on measurements collected during the last 30 minutes.">
+                                                  Live
+                                              </button>
+                                        </span>
+
+
+                                        <input type="text" id="daterange" class="form-control navbar-btn daterange"/>
+                                        <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default"
+                                                ng-click="vm.valuationDatePickerOpen()">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4>Choose Average User Throughput Min-Max Values Of The Cell</h4>
+                                            <div id="maxmin"></div>
+                                        </div>
+                                        <div class="col-lg-6">
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Min avg user throughput"
+                                                       name="minspeed"
+                                                       id="minspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">(min)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control navbar-btn"
+                                                       placeholder="Max avg user throughput"
+                                                       name="maxspeed"
+                                                       id="maxspeed">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default  navbar-btn" type="submit"><i
+                                                            class="glyphicon">(max)</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <button id="submitQuery" type="button" class="btn btn-success">Submit</button>
+                                        <button id="resetQuery" type="button" class="btn btn-default">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="querylegend"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="mtn-map">
+                        <h1 class="sidebar-header">DISK SPACE<span class="sidebar-close"><i
+                                class="fa fa-caret-left"></i></span></h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <svg class="chart" width="420" height="420"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="analytics">
+                        <h1 class="sidebar-header">SPACE<span class="sidebar-close"><i
+                                class="fa fa-caret-left"></i></span></h1>
+                    </div>
+                    <div class="sidebar-pane" id="logout">
+                        <h1 class="sidebar-header">
+                            OPTIONS
+                            <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                        </h1>
+
+                        <div class="query-panel container">
+                            <div class="tab-content">
+                                <div class="pull-right">
+                                    <button href="" class="btn navbar-btn btn-default sql" data-toggle="tooltip"
+                                            data-placement="left" title="">SQL
+                                    </button>
+
+                                    <a class="btn navbar-btn  btn-default" href="#/admin"><span
+                                            class="glyphicon glyphicon-user"></span>({{vm.user}})
+                                    </a>
+                                    <a class="btn navbar-btn  btn-default" href="#/login"><span
+                                            class="glyphicon glyphicon-log-out"></span>Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="search">
+                        <h1 class="sidebar-header">Search<span class="sidebar-close"><i
+                                class="fa fa-caret-left"></i></span></h1>
+                        <div class="navbar-btn pull-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search POI or Address"
+                                       name="srch-term"
+                                       id="searchBox">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i
+                                            class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-pane" id="settings">
+                        <h1 class="sidebar-header">Settings<span class="sidebar-close"><i
+                                class="fa fa-caret-left"></i></span></h1>
+
+                        <div class="">
+
+                            <div class="container">
+                                <div class="row">
+                                    <p>The settings will applied on all tabs/views of the system.</p>
+                                </div>
+                                <div class="row top-buffer">
+                                    <div class="input-group">Show Cell Tower Location:
+
+                                        <div class="pull-right">
+                                            <input type="checkbox" name="show-cells">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row top-buffer">
+                                    <div class="input-group">Show Predicted Coverage Map (2G):
+
+                                        <div class="pull-right">
+                                            <input type="checkbox" name="show-heatmap2g">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row top-buffer">
+                                    <div class="input-group">Show Predicted Coverage Map (3G):
+
+                                        <div class="pull-right">
+                                            <input type="checkbox" name="show-heatmap3g">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group">Show Predicted Coverage Map (4G):
+
+                                        <div class="pull-right">
+                                            <input type="checkbox" name="show-heatmap4g">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="map" class="map sidebar-map">
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

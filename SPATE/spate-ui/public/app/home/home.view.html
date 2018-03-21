@@ -1,0 +1,74 @@
+﻿
+
+<!--<nav class="header navbar navbar-custom" role="navigation">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headerNavbar">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="/#/">{{vm.appname}}</a>-->
+
+        <!--</div>-->
+        <!--<div class=" collapse navbar-collapse" id="headerNavbar">-->
+            <!--<div class="col-sm-5 col-md-5 navbar-btn pull-left">-->
+                <!--<div class="input-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search POI or Address" name="srch-term"-->
+                           <!--id="searchBox">-->
+                    <!--<div class="input-group-btn">-->
+                        <!--<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <!--<div class="pull-right">-->
+                <!--<button href="" class="btn navbar-btn btn-default sql" data-toggle="tooltip"-->
+                        <!--data-placement="left" title="">SQL-->
+                <!--</button>-->
+
+                <!--<a class="btn navbar-btn  btn-default" href="#/admin"><span-->
+                        <!--class="glyphicon glyphicon-user"></span>({{vm.user}})-->
+                <!--</a>-->
+                <!--<a class="btn navbar-btn  btn-default" href="#/login"><span-->
+                        <!--class="glyphicon glyphicon-log-out"></span>Logout-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</nav>-->
+
+<div class="container">
+    <div>
+        <div ng-if="vm.selection === 'moving'"><!---->
+            <div ng-include="'views/moving'" class="main">
+            </div>
+        </div>
+
+
+        <div ng-if="vm.selection === 'location'|| vm.selection === undefined"
+             ng-class="{ active: isActive('/location') || isActive('/')}"><!---->
+            <div class="main" ng-include="'views/location'"></div>
+
+
+        </div>
+        <div class="main" ng-if="vm.selection === 'nms'"><!---->
+            <div ng-include="'views/nms'" class="main">
+            </div>
+        </div>
+        <div class="main" ng-if="vm.selection === 'admin'"><!---->
+            <div ng-include="'views/admin'" class="main">
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="alert_placeholder"></div>
+<!--<footer class="footer navbar navbar-custom">-->
+    <!--<div class="navbar-header">-->
+        <!--&lt;!&ndash;<img class="navbar-brand footer-img" src="assets/images/mtn-logo.jpg"/>&ndash;&gt;-->
+        <!--<img class="navbar-brand footer-img" src="assets/images/ucy-logo.png"/>-->
+    <!--</div>-->
+<!--</footer>-->

@@ -1,0 +1,87 @@
+@(generatorInfo: pythia.models.generator.GeneratorInfo)
+
+@import util.UIUtils
+
+@main("Generator") {
+    <div class="row">
+        <div class="col-lg-12">
+                <!-- Generator status -->
+            <div class="panel panel-default panel-primary">
+                <div class="panel-heading">
+                    <i class="fa fa-gears fa-fw"></i>
+                    Generator Status
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-refresh fa-fw"></i> Refresh
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-upload fa-fw"></i> Generator State
+                            <span class="pull-right text-muted small"><em>@generatorInfo.state</em></span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-clock-o fa-fw"></i> Uptime
+                            <span class="pull-right text-muted small"><em>@UIUtils.formatDuration(generatorInfo.uptime)</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-cloud-upload fa-fw"></i> Performance
+                            <span class="pull-right text-muted small"><em>@generatorInfo.performance</em></span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-upload fa-fw"></i> Connected Clients
+                            <span class="pull-right text-muted small"><em>@generatorInfo.numOfClients</em></span>
+                        </a>
+                    </div>
+                        <!-- /.list-group -->
+                </div>
+                    <!-- /.panel-body -->
+            </div>
+                <!-- /.panel -->
+        </div>
+            <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+                <!-- Connected clients -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-users fa-fw"></i>
+                    Clients
+                </div>
+                    <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                    @if(generatorInfo.numOfClients > 0) {
+                        @generatorInfo.clients.map { client =>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-upload fa-fw"></i> @client.host
+                            <span class="pull-right text-muted small">
+                                <em>@UIUtils.formatDuration(client.uptime)</em>
+                            </span>
+                        </a>
+                        }
+                    } else {
+                        <em>No connected clients</em>
+                    }
+                    </div>
+                        <!-- /.list-group -->
+                </div>
+                    <!-- /.panel-body -->
+            </div>
+                <!-- /.panel -->
+        </div>
+            <!-- /.col-lg-12 -->
+    </div>
+}

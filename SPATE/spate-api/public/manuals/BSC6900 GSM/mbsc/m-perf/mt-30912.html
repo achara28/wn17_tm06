@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="pmiref" />
+<meta name="DC.Title" content=
+"Average Power Decrease on GSM 2.0 MHz Interfering Frequency" />
+<meta name="DC.subject" content=
+"CELL.2MDISTURB.AVG.FALL.POWER.RANGE" />
+<meta name="keywords" content=
+"CELL.2MDISTURB.AVG.FALL.POWER.RANGE" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mt-30912" />
+<meta name="DC.Language" content="en-us" />
+<title>Average Power Decrease on GSM 2.0 MHz Interfering
+Frequency</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mt-30912.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-30912.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-30912.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mt-30912" id="Mt-30912"></a><a name="Mt-30912" id=
+"Mt-30912"></a>
+<h1 class="topictitle1">Average Power Decrease on GSM 2.0 MHz
+Interfering Frequency</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.1">ID</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.2">Counter</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.3">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.1">1282449360</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.2">
+CELL.2MDISTURB.AVG.FALL.POWER.RANGE</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.3">S3936U:Average Power Decrease on GSM
+2.0 MHz Interfering Frequency</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Description</h4>
+
+<p>This counter provides the average power decrease on the
+interfering frequencies in a measurement period when there is a 2.0
+MHz frequency spacing between the GSM and UMTS networks. This
+counter indicates the average power decrease extent for the
+frequencies that cause interference on the 2.0 MHz-spacing UMTS
+frequency after frequency-based power control is enabled.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement point</h4>
+
+<p>The measurement is triggered when the BTS decreases the power on
+the frequencies that cause interference on the 2.0 MHz-spacing UMTS
+frequency. The measurement is performed for different power
+decrease extents.</p>
+
+<p>The value of this counter equals to total power decrease on GSM
+2.0 MHz interfering frequency dividing by the total duration for
+power decrease on GSM 2.0 MHz interference frequency.</p>
+
+<p>The total power decrease on GSM 2.0 MHz interfering frequency is
+calculated by the following formula:</p>
+
+<p>1.5 x Duration for 1 to 2 dB power decrease on GSM 2.0 MHz
+interference frequency + 3.5 x Duration for 3 to 4 dB power
+decrease on GSM 2.0 MHz interference frequency + 5.5 x Duration for
+5 to 6 dB power decrease on GSM 2.0 MHz interference frequency +
+7.5 x Duration for 7 to 8 dB power decrease on GSM 2.0 MHz
+interference frequency + 9.5 x Duration for 9 to 10 dB power
+decrease on GSM 2.0 MHz interference frequency</p>
+
+<p>The total duration for power decrease on GSM 2.0 MHz
+interference frequency is calculated by the following formula:</p>
+
+<p>Duration for 1 to 2 dB power decrease on GSM 2.0 MHz
+interference frequency + Duration for 3 to 4 dB power decrease on
+GSM 2.0 MHz interference frequency + Duration for 5 to 6 dB power
+decrease on GSM 2.0 MHz interference frequency + Duration for 7 to
+8 dB power decrease on GSM 2.0 MHz interference frequency +
+Duration for 9 to 10 dB power decrease on GSM 2.0 MHz interference
+frequency</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Formula</h4>
+
+<p>None</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Unit</h4>
+
+<p>dB</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Related Features</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.1">Counter</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.2">Feature ID</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.6.2.1.4.1.3">Feature Name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.1">
+CELL.2MDISTURB.AVG.FALL.POWER.RANGE</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.2">
+<p>MRFD-211804</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.6.2.1.4.1.3">
+<p>GSM Power Control on Interference Frequency for GU Small
+Frequency gap(GSM)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

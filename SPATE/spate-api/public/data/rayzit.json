@@ -1,0 +1,553 @@
+{
+    "globals": [
+        {
+            "Name": "userId",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "A valid user id."
+        }
+    ],
+    "_baseurl": "http://api.rayzit.com",
+    "baseurl": "http://dev.rayzit.com",
+    "_baseurl": "http://localhost:9000",
+    "endpoints": [
+        {
+            "name": "Users",
+            "description": "<p>These are user endpoints, with them you will be able to get user power and livefeed about given. Additionally you will be able to update user's location.</p> <p>All requests require a valid user id.</p>",
+            "methods": [
+                {
+                    "MethodName": "Update User Location",
+                    "Synopsis": "This will update user's location",
+                    "HTTPMethod": "POST",
+                    "URI": "/user/update",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "appId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Application Id"
+                        },
+                        {
+                            "Name": "latitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The latitude of the User"
+                        },
+                        {
+                            "Name": "longitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The longitude of the User"
+                        },
+                        {
+                            "Name": "accuracy",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "Accuracy of User position"
+                        }
+
+                    ]
+                },
+                {
+                    "MethodName": "Power",
+                    "Synopsis": "This will get this user's power.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/power",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "User's Rayz",
+                    "Synopsis": "This will get this user's rayz and return it as a list.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/myrayz/:page",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        },
+                        {
+                            "Name": "page",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The page number. Each page contains 20 Rayz."
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "User's Starred Rayz",
+                    "Synopsis": "This will get this user's starred rayz and return it as a list.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/starred/:page",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        },
+                        {
+                            "Name": "page",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The page number. Each page contains 20 Rayz."
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "LiveFeed",
+                    "Synopsis": "This will get this user's live feed.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/livefeed",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "LiveFeed Counter",
+                    "Synopsis": "This will get this user's live feed counter.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/livefeed/counter",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "LiveFeed Random",
+                    "Synopsis": "This will get this user's live feed counter and a random answer.",
+                    "HTTPMethod": "GET",
+                    "URI": "/user/:userid/livefeed/random",
+                    "parameters": [
+                        {
+                            "Name": "userid",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "ObjectId",
+                            "Description": "The user id"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rayz",
+            "description": "<p>These are rayz endpoints, with them you will be able to: create and delete a rayz, re-rayz a rayz, favorite and unfavorite a rayz, get rayz's answers counter and get all answers related to a rayz.</p> <p>All requests require a valid rayz id.</p>",
+            "methods": [
+                {
+                    "MethodName": "Create a rayz",
+                    "Synopsis": "This will create a new rayz",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/create",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzMessage",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Message"
+                        },
+                        {
+                            "Name": "latitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The latitude of the User"
+                        },
+                        {
+                            "Name": "longitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The longitude of the User"
+                        },
+                        {
+                            "Name": "accuracy",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "Accuracy of User position"
+                        },
+                        {
+                            "Name": "maxDistance",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "Indicates the maximum desired distance a Rayz will travel"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        }
+
+                    ]
+                },
+                {
+                    "MethodName": "Re-Rayz",
+                    "Synopsis": "This will re-rayz the given rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/rerayz",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        },
+                        {
+                            "Name": "latitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The latitude of the User"
+                        },
+                        {
+                            "Name": "longitude",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The longitude of the User"
+                        },
+                        {
+                            "Name": "accuracy",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "Accuracy of User position"
+                        },
+                        {
+                            "Name": "maxDistance",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "Indicates the maximum desired distance a Rayz will travel"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Delete",
+                    "Synopsis": "This will delete the given Rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/delete",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Star Rayz",
+                    "Synopsis": "This will star the given Rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/star",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Un-star Rayz",
+                    "Synopsis": "This will un-star the given Rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/star/delete",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Rayz Answers",
+                    "Synopsis": "This will return the answers for the given Rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/answers",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Rayz Answers Counter",
+                    "Synopsis": "This will return the number of answers for the given Rayz.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/counter",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Report a rayz",
+                    "Synopsis": "This will mark the Rayz as inappropriate and notify the administrators.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/report",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rayz Answers",
+            "description": "<p>These are rayz answers endpoints, with them you will be able to: create a new rayz reply.</p> <p>All requests require a valid rayz id.</p>",
+            "methods": [
+                {
+                    "MethodName": "Create a new Rayz Reply",
+                    "Synopsis": "This will create a new Rayz Reply",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/reply",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Id"
+                        },
+                        {
+                            "Name": "rayzReplyMessage",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Reply Message"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        },
+                        {
+                            "Name": "files",
+                            "Required": "N",
+                            "Default": null,
+                            "Type": "file",
+                            "Description": "The Media ID from /add/media endpoint (jpeg, mp4, wav)"
+                        }
+
+                    ]
+                },
+                {
+                    "MethodName": "PowerUp Rayz Reply",
+                    "Synopsis": "PowerUp a Rayz Reply.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/reply/powerup",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzReplyId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Reply Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "PowerDown Rayz Reply",
+                    "Synopsis": "PowerDown a Rayz Reply.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/reply/powerdown",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzReplyId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Reply Id"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Report Rayz Reply",
+                    "Synopsis": "This will report the Rayz Reply as inapropriate to the administrators.",
+                    "HTTPMethod": "POST",
+                    "URI": "/rayz/reply/report",
+                    "parameters": [
+                        {
+                            "Name": "userId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The ID of the User"
+                        },
+                        {
+                            "Name": "rayzReplyId",
+                            "Required": "Y",
+                            "Default": null,
+                            "Type": "string",
+                            "Description": "The Rayz Reply Id"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

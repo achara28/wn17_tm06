@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                    controllers.Application.index(any = "none")
+
+# Play routes serving HTML to AngularJS start with /views
+GET         /views/*any          controllers.Application.loadPublicHTML(any)
+#GET         /                    controllers.Assets.at(path="/public", file="app/index.html")
+# Login page
+#GET         /login               controllers.UserManagement.login
+POST        /login               controllers.UserManagement.authenticate
+GET         /logout              controllers.UserManagement.logout
+
+# Pythia API endpoints
+GET         /cellTowers          controllers.PythiaApi.CellTowers
+GET         /getSize             controllers.PythiaApi.GetSize
+GET         /user                controllers.UserManagement.userInfo
+GET         /user/jobs           controllers.PythiaApi.UserJobs
+POST        /jobsInfo            controllers.PythiaApi.JobsInfo
+GET         /moving              controllers.PythiaApi.MovingBoxes
+POST        /cdr                 controllers.PythiaApi.HistoryCDR
+POST        /cdrperday           controllers.PythiaApi.HistoryCDRPerDay
+POST        /tcdr                controllers.PythiaApi.HistoryCDRDT()
+POST        /tnms2g              controllers.PythiaApi.HistoryNMS2GDT()
+POST        /tnms3g              controllers.PythiaApi.HistoryNMS3GDT()
+POST        /thnms3g              controllers.PythiaApi.HistoryTHNMS3GDT()
+POST        /tscdr               controllers.PythiaApi.HistoryCDRDTS()
+POST        /tpcdr               controllers.PythiaApi.HistoryCDRDTP()
+POST        /tspcdr              controllers.PythiaApi.HistoryCDRDTSP()
+POST        /nms                 controllers.PythiaApi.HistoryNMS
+POST        /moved               controllers.PythiaApi.MovedCDR
+GET         /2G                  controllers.PythiaApi.get2g
+GET         /3G                  controllers.PythiaApi.get3g
+GET         /4G                  controllers.PythiaApi.get4g
+GET         /4gl/:x/:y/:z        controllers.PythiaApi.get4gl(x,y,z)
+GET         /3gl/:x/:y/:z        controllers.PythiaApi.get3gl(x,y,z)
+GET         /2gl/:x/:y/:z        controllers.PythiaApi.get2gl(x,y,z)
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /favicon.ico         controllers.Assets.at(path="/public", file="images/favicon.ico")
+# Redirect all unknown routes to the index page
+GET         /*any                controllers.Application.index(any)

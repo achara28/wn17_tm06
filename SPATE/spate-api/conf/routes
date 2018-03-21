@@ -1,0 +1,75 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /dashboard                               controllers.Application.dashboard()
+GET           /manuals                                 controllers.Application.manuals()
+GET           /editor                                  controllers.Application.editor()
+GET           /recorder                                controllers.Application.recorder()
+GET           /generator                               controllers.Application.generator()
+GET           /jobs                                    controllers.Application.jobs()
+GET           /login                                   controllers.Application.loginPage()
+
+# Editor page
+POST          /save                                    controllers.UserController.saveCode()
+
+# Fallback
+GET           /                                        controllers.Application.index()
+GET           /developers                              controllers.Application.developersPage()
+
+# User Authentication
+GET           /user/login                              controllers.Application.loginPage()
+POST          /user/login                              controllers.UserController.authenticate()
+DELETE        /user/logout                             controllers.UserController.logout()
+
+# Users
+GET           /user                                    controllers.UserController.userInfo()
+POST          /user                                    controllers.UserController.createUser()
+# TODO: edit user? add pythia key?
+
+
+# PYTHIA Web API
+GET           /api/jobs                                controllers.JobsController.listJobs()
+GET           /api/job/:jobId                          controllers.JobsController.jobInfo(jobId)
+DELETE        /api/job/:jobId                          controllers.JobsController.deleteJob(jobId)
+
+GET           /user/jobs                               controllers.JobsController.userJobs()
+
+GET           /api/recorder                            controllers.RecorderController.getInfo()
+GET           /api/recorder/start                      controllers.RecorderController.start()
+GET           /api/recorder/stop                       controllers.RecorderController.stop()
+
+
+GET           /api/getSize                             controllers.VisaulizationController.getSizeHDFS()
+GET           /api/cellTowers                          controllers.VisaulizationController.getCellTowersHDFS()
+GET           /api/4g                                  controllers.VisaulizationController.getCoverage4gHDFS()
+GET           /api/3g                                  controllers.VisaulizationController.getCoverage3gHDFS()
+GET           /api/2g                                  controllers.VisaulizationController.getCoverage2gHDFS()
+GET           /api/4gl/:x/:y/:z                         controllers.VisaulizationController.getCoverage4gl(x,y,z)
+GET           /api/3gl/:x/:y/:z                         controllers.VisaulizationController.getCoverage3gl(x,y,z)
+GET           /api/2gl/:x/:y/:z                         controllers.VisaulizationController.getCoverage2gl(x,y,z)
+#Get the history data
+#GET           /api/cdr/:start/:end                    controllers.RecorderController.fetchHistoryCDR(start,end)
+GET           /api/dcdr/:date                                                          controllers.RecorderController.fetchDCDRHDFS(date)
+GET           /api/tcdr/:date/:start/:end                                              controllers.RecorderController.fetchTCDRHDFS(date,start,end)
+GET           /api/tscdr/:date/:start/:end/:callingpartynumber                         controllers.RecorderController.fetchTSCDRHDFS(date,start,end,callingpartynumber)
+GET           /api/tpcdr/:date/:start/:end/:productid                                  controllers.RecorderController.fetchTPCDRHDFS(date,start,end,productid)
+GET           /api/tspcdr/:date/:start/:end/:callingpartynumber/:productid             controllers.RecorderController.fetchTSPCDRHDFS(date,start,end,callingpartynumber,productid)
+GET           /api/tnms3g/:date/:start/:end                                            controllers.RecorderController.fetchTNMS3GHDFS(date,start,end)
+GET           /api/tnms3g/:date/:start/:end                                            controllers.RecorderController.fetchTNMS3GHDFS(date,start,end)
+GET           /api/thnms3g/:date/:start/:end                                            controllers.RecorderController.fetchTHNMS3GHDFS(date,start,end)
+#Get the specific queries
+GET           /api/queries/moving                      controllers.RecorderController.fetchMovingObj()
+GET           /api/queries/cdrmoved/:start/:end        controllers.RecorderController.fetchMovedCDR(start,end)
+
+
+GET           /api/queries/model                        controllers.VisaulizationController.telco()
+
+# Error Pages
+GET           /500                                     controllers.Application.InternalServerErrorPage()
+GET           /404                                     controllers.Application.NotFoundPage()
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                            controllers.Assets.at(path="/public", file)
+    

@@ -1,0 +1,97 @@
+@(title: String, baseurl: String)
+
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>@title</title>
+
+
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/leaflet-sidebar.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery-ui.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-theme.min.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-table.min.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/MarkerCluster.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/css/font-awesome.min.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/leaflet.awesome-markers.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/metricsgraphics.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/leaflet.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/mapbox.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/autocomplete.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/easy-button.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-switch.min.css")"/>
+        <link rel="stylesheet" type="text/css" media="all" href="@routes.Assets.at("stylesheets/daterangepicker.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/Control.FullScreen.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/coverage-webgl-leaflet.css")"/>
+        <link href="@routes.Assets.at("stylesheets/leaflet.timedimension.control.min.css")" rel="stylesheet"/>
+        <link href="@routes.Assets.at("app/app-content/app.css")" rel="stylesheet"/>
+
+    </head>
+    <body data-key="@baseurl">
+
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+            ng-if="flash" ng-bind="flash.message"></div>
+            <div ng-view ></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places&sensor=false"></script>
+            <!-- Latest compiled and minified JavaScript -->
+
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-2.0.3.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-ui.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.numeric.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/angular.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/angular-route.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/angular-cookies.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/sha1.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/leaflet.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/leaflet.markercluster.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/plugins/leaflet.awesome-markers.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/plugins/L.Control.Locate.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/moment.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/moment-timezone-with-data.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/daterangepicker.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/plugins/d3.min.js")" ></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/metricsgraphics.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/ngRainbow.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/autocomplete.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/easy-button.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap-switch.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/Control.FullScreen.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/iso8601.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/leaflet.timedimension.src.js")"></script>
+        <script type="text/javascript"  src="@routes.Assets.at("javascripts/bootstrap-table.min.js")"></script>
+        <script type="text/javascript"  src="@routes.Assets.at("javascripts/leaflet-sidebar.js")"></script>
+         @*Application scripts*@
+
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
+
+        <script type="text/javascript" src="@routes.Assets.at("app/app.js")"></script>
+
+        <script type="text/javascript" src="@routes.Assets.at("app/app-services/authentication.service.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/app-services/flash.service.js")"></script>
+
+            <!-- Real user service that uses an api -->
+        <script type="text/javascript" src="@routes.Assets.at("app/app-services/user.service.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/admin/admin.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/maps/million.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/maps/location.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/maps/moving.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/maps/nms.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/home/home.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("app/login/login.controller.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/webgl-heatmap.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/webgl-heatmap-leaflet.js")"></script>
+
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/webgl-coverage.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/webgl-coverage-leaflet.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/TileLayer.GeoJSON.js")"></script>
+
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/leaflet-search.src.js")"></script>
+
+    </body>
+</html>

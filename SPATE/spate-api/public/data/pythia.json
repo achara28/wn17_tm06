@@ -1,0 +1,231 @@
+{
+  "globals": [
+    {
+      "Name": "auth_token",
+      "Required": "Y",
+      "Default": "",
+      "Type": "string",
+      "Description": "A valid user auth token."
+    }
+  ],
+  "_baseurl": "http://localhost:9001",
+  "_baseurl": "http://192.168.14.30:9001",
+  "baseurl": "http://pythia1:9001",
+  "endpoints": [
+    {
+      "name": "Users",
+      "description": "<p>These are endpoints that have to do with users.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+
+      ]
+    },
+    {
+      "name": "Jobs",
+      "description": "<p>These are endpoints that have to do with jobs.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+        {
+          "MethodName": "Get Jobs",
+          "Synopsis": "A list of all the jobs in the system",
+          "HTTPMethod": "GET",
+          "URI": "/api/jobs",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            }
+          ]
+        },
+        {
+          "MethodName": "Get job info",
+          "Synopsis": "Retrieves a job's info",
+          "HTTPMethod": "GET",
+          "URI": "/api/job/:jobid",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            },
+            {
+              "Name": "jobid",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The job id"
+            }
+          ]
+        },
+        {
+          "MethodName": "Delete a job",
+          "Synopsis": "This will delete the given job.",
+          "HTTPMethod": "DELETE",
+          "URI": "/api/job/:jobid",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            },
+            {
+              "Name": "jobid",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The job id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "description": "<p>These are endpoints that have to do with history.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+        {
+          "MethodName": "Get all recorded data",
+          "Synopsis": "A list of all the recorder data between to dates",
+          "HTTPMethod": "GET",
+          "URI": "/api/cdr/:start/:end",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            },
+            {
+              "Name": "start",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The start date"
+            },
+            {
+              "Name": "end",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The end date id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "description": "<p>These are endpoints that have to do with history.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+        {
+          "MethodName": "Get all recorded data",
+          "Synopsis": "A list of all the recorder data between to dates",
+          "HTTPMethod": "GET",
+          "URI": "/api/nms/:start/:end",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            },
+            {
+              "Name": "start",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The start date"
+            },
+            {
+              "Name": "end",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The end date id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Queries",
+      "description": "<p>These are endpoints that have to do with history.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+        {
+
+          "MethodName": "Get all moving subscribers-product pairs between the provided dates",
+          "Synopsis": "A list of all the moving object (The  moving object is returned)",
+          "HTTPMethod": "GET",
+          "URI": "/api/queries/cdrmoved/:start/:end",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            },
+            {
+              "Name": "start",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The start date"
+            },
+            {
+              "Name": "end",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "The end date id"
+            }
+          ]
+        },
+        {
+
+          "MethodName": "Get all moving subscribers-product pairs (Count and CellIds)",
+          "Synopsis": "A list of all the moving object (The cellId is returned)",
+          "HTTPMethod": "GET",
+          "URI": "/api/queries/moving",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cell Towers",
+      "description": "<p>These are endpoints that have to do with cell towers.</p><p>All requests require a valid auth_token.</p>",
+      "methods": [
+        {
+          "MethodName": "Get all cell towers",
+          "Synopsis": "A list of all the cell towers",
+          "HTTPMethod": "GET",
+          "URI": "/api/cellTowers",
+          "parameters": [
+            {
+              "Name": "auth_token",
+              "Required": "Y",
+              "Default": null,
+              "Type": "string",
+              "Description": "A valid user auth token."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

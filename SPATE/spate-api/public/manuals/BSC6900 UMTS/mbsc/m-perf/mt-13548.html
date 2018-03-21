@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="pmiref" />
+<meta name="DC.Title" content=
+"Number of Successful U-TDOA Positionings" />
+<meta name="DC.subject" content="VS.LCS.Utdoa.Succ" />
+<meta name="keywords" content="VS.LCS.Utdoa.Succ" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="Mt-13548" />
+<meta name="DC.Language" content="en-us" />
+<title>Number of Successful U-TDOA Positionings</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "mbsc/m-perf/mt-13548.html";
+</script>
+
+</head>
+<body style=
+"clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-13548.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=mbsc%2Fm-perf%2Fmt-13548.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+
+<a name="Mt-13548" id="Mt-13548"></a><a name="Mt-13548" id=
+"Mt-13548"></a>
+<h1 class="topictitle1">Number of Successful U-TDOA
+Positionings</h1>
+
+<div>
+<div class="section">
+<h4 class="sectiontitle">Measurement Counters</h4>
+
+<div class="tablenoborder">
+<table cellpadding="4" cellspacing="0" summary="" frame="border"
+border="1" rules="all">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.1">ID</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.2">Counter</th>
+<th class="cellrowborder" valign="top" width="33.33333333333333%"
+id="mcps1.3.1.2.1.4.1.3">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.1">73423868</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.2">VS.LCS.Utdoa.Succ</td>
+<td class="cellrowborder" valign="top" width="33.33333333333333%"
+headers="mcps1.3.1.2.1.4.1.3">Number of Successful U-TDOA
+Positionings for RNC</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Description</h4>
+
+<p>This counter provides the number of successful U-TDOA
+positionings under an RNC.</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Measurement point</h4>
+
+<p>In SAS centric mode, the measurement is triggered at point D as
+shown in the figure. This counter is incremented by one when the
+RNC receives a PCAP POSITION INITIATION RESPONSE message and the
+following conditions are both met:</p>
+
+<p>1. The RNC receives a PCAP POSITION ACTIVATION REQUEST message
+that designates the U-TDOA positioning method from the SAS at a
+point of time between point A when a PCAP POSITION INITIATION
+REQUEST message is received and point D when a PCAP POSITION
+INITIATION RESPONSE message is received.</p>
+
+<p>2. At point C, the RNC sends the SAS a PCAP POSITION ACTIVATION
+RESPONSE message that contains UE's U-TDOA positioning
+information.</p>
+
+<div class="fignone"><span class="figcap"><b>Figure 1</b> U-TDOA
+positioning procedure in SAS centric mode</span><br />
+<span><img src="images/rnc-image081.gif" /></span><br />
+</div>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Formula</h4>
+
+<p>None</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Unit</h4>
+
+<p>None</p>
+</div>
+
+<div class="section">
+<h4 class="sectiontitle">Related Features</h4>
+
+<p>None</p>
+</div>
+</div>
+
+<div class="hrcopyright">
+<hr size="2" />
+</div>
+
+<div class="hwcopyright">Huawei Proprietary and Confidential</div>
+
+<div class="hwcopyright">Copyright © Huawei Technologies Co.,
+Ltd.</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
